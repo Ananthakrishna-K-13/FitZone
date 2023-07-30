@@ -1,0 +1,39 @@
+.nav-container{
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+}
+.logo{
+    padding-left: 7vw;
+    padding-top: 3.5vh;
+    height: 100%;
+    width: 30% ;
+    font-family: var(--ff-l);
+    font-weight: 700;
+    font-size: 25px;
+    color: black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.dumbbel{
+    width: 100%;
+}
+.routes{
+    height: 100%;
+    width: 70%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7%;
+    padding-right: 20rem;
+}
+.Link{
+    text-decoration: none;
+    font-family: var(--ff-h);
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    border-bottom: 3px solid red;
+}

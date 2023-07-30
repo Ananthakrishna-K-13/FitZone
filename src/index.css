@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --ff-p: 'Open Sans', sans-serif;
+    --ff-h: 'Poppins', sans-serif;
+    --ff-l: 'Josefin Sans', sans-serif;
+}

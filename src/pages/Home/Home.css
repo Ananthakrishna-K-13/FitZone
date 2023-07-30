@@ -1,0 +1,7 @@
+.top-bar{
+    /* background-color: var(--violet);
+    background-image: url(../../assets/bg-desktop.svg); */
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+}
