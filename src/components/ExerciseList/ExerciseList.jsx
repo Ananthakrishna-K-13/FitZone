@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './ExerciseList.css'
 import { exerciseOptions, fetchData } from '../../fetchData'
+import output from '../../sampleoutput.json' 
+import ExerciseCard from '../ExerciseCard/ExerciseCard'
 
 export default function ExerciseList({bodyPart, setBodyPart, targetMuscle, setTargetMuscle, equipment, setEquipment, exercisesToDisplay, setExercisesToDisplay}) {
     const [bodyParts, setBodyParts] = useState([])
@@ -18,23 +20,18 @@ export default function ExerciseList({bodyPart, setBodyPart, targetMuscle, setTa
         }
         fetchFilterData();
     }, []) 
-    useEffect(async () => {
+    useEffect(() => {
         setExercisesToDisplay([])
         const fetchDataToShow = async()=>
         {
         let dataToShow = [];
-        console.log(bodyPart);
         if(bodyPart!=='all') dataToShow = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart.item}`, exerciseOptions);
         else if(targetMuscle!=='all') dataToShow = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/target/${targetMuscle.item}`, exerciseOptions);
         else if(equipment!=='all') dataToShow = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/equipment/${equipment.item}`, exerciseOptions);
         else dataToShow = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
         setExercisesToDisplay(dataToShow);
-        console.log(bodyPart);
-        console.log(targetMuscle);
-        console.log(equipment);
     }
-    await fetchDataToShow();
-    console.log(exercisesToDisplay);
+    fetchDataToShow();
     }, [bodyPart, targetMuscle, equipment]) */   
   return (
     <div className='outer-container'>
@@ -85,7 +82,15 @@ export default function ExerciseList({bodyPart, setBodyPart, targetMuscle, setTa
         </div>
         <div className='itemlist'>
             <h1>Results:</h1>
-                
+            <div className='card-container'>
+                {
+                    /* exercisesToDisplay */output.map((element)=>{
+                        return(
+                            <ExerciseCard element={element} key={element.id} />
+                        )
+                    })
+                }
+            </div>
         </div>
     </div>
   )
