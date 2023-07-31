@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import './ExerciseList.css'
 import { exerciseOptions, fetchData } from '../../fetchData'
 
-export default function ExerciseList({bodyPart, setBodyPart, targetMuscle, setTargetMuscle, equipment, setEquipment, exercisesToDisplay}) {
+export default function ExerciseList({bodyPart, setBodyPart, targetMuscle, setTargetMuscle, equipment, setEquipment, exercisesToDisplay, setExercisesToDisplay}) {
     const [bodyParts, setBodyParts] = useState([])
     const [targetMuscles, setTargetMuscles] = useState([])
     const [equipments, setEquipments] = useState([])
+    
     /* useEffect(() => {
         const fetchFilterData = async() =>{
             let dataBodyParts = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',exerciseOptions);
@@ -16,7 +17,25 @@ export default function ExerciseList({bodyPart, setBodyPart, targetMuscle, setTa
             setEquipments([...dataEquipment])
         }
         fetchFilterData();
-    }, []) */
+    }, []) 
+    useEffect(async () => {
+        setExercisesToDisplay([])
+        const fetchDataToShow = async()=>
+        {
+        let dataToShow = [];
+        console.log(bodyPart);
+        if(bodyPart!=='all') dataToShow = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart.item}`, exerciseOptions);
+        else if(targetMuscle!=='all') dataToShow = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/target/${targetMuscle.item}`, exerciseOptions);
+        else if(equipment!=='all') dataToShow = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/equipment/${equipment.item}`, exerciseOptions);
+        else dataToShow = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+        setExercisesToDisplay(dataToShow);
+        console.log(bodyPart);
+        console.log(targetMuscle);
+        console.log(equipment);
+    }
+    await fetchDataToShow();
+    console.log(exercisesToDisplay);
+    }, [bodyPart, targetMuscle, equipment]) */   
   return (
     <div className='outer-container'>
         <div className='filterbar'>
@@ -65,8 +84,8 @@ export default function ExerciseList({bodyPart, setBodyPart, targetMuscle, setTa
             </div>
         </div>
         <div className='itemlist'>
-            <h1>Search Results</h1>
-            
+            <h1>Results:</h1>
+                
         </div>
     </div>
   )

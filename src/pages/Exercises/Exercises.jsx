@@ -14,7 +14,7 @@ export default function Exercises() {
     <div>
         <Navbar/>
         <SearchBar setExercisesToDisplay={setExercisesToDisplay} />
-        <ExerciseList bodyPart={bodyPart} setBodyPart={setBodyPart} targetMuscle={targetMuscle} setTargetMuscle={setTargetMuscle} equipment={equipment} setEquipment={setEquipment} exercisesToDisplay={exercisesToDisplay} />
+        <ExerciseList bodyPart={bodyPart} setBodyPart={setBodyPart} targetMuscle={targetMuscle} setTargetMuscle={setTargetMuscle} equipment={equipment} setEquipment={setEquipment} exercisesToDisplay={exercisesToDisplay} setExercisesToDisplay={setExercisesToDisplay} />
     </div>
   )
 }
