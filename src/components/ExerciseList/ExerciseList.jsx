@@ -53,7 +53,7 @@ export default function ExerciseList() {
         </div>
         <div className='itemlist'>
             <h1>Search Results</h1>
-
+            
         </div>
     </div>
   )
