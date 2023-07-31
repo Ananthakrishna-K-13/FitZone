@@ -6,7 +6,8 @@ import { fetchData,exerciseOptions } from "../../fetchData";
 export default function SearchBar({setExercisesToDisplay}) {
   const [search, setSearch] = useState("");
   const handleSearch = async ()=>{
-    if(search!=''){
+    if(search!==''){
+      setExercisesToDisplay([]);
       const exercisesData= await fetchData('https://exercisedb.p.rapidapi.com/exercises',exerciseOptions);
       let requiredExercises = exercisesData.filter(
         (item)=>item.name.toLowerCase().includes(search) ||

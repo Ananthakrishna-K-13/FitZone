@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import './ExerciseList.css'
 import { exerciseOptions, fetchData } from '../../fetchData'
 
-export default function ExerciseList() {
+export default function ExerciseList({bodyPart, setBodyPart, targetMuscle, setTargetMuscle, equipment, setEquipment, exercisesToDisplay}) {
     const [bodyParts, setBodyParts] = useState([])
     const [targetMuscles, setTargetMuscles] = useState([])
-    const [equipment, setEquipment] = useState([])
+    const [equipments, setEquipments] = useState([])
     /* useEffect(() => {
         const fetchFilterData = async() =>{
             let dataBodyParts = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',exerciseOptions);
@@ -13,7 +13,7 @@ export default function ExerciseList() {
             let dataEquipment = await fetchData('https://exercisedb.p.rapidapi.com/exercises/equipmentList',exerciseOptions);
             setBodyParts([...dataBodyParts])
             setTargetMuscles([...dataTargetMuscles])
-            setEquipment([...dataEquipment])
+            setEquipments([...dataEquipment])
         }
         fetchFilterData();
     }, []) */
@@ -26,7 +26,12 @@ export default function ExerciseList() {
                 {      
                     bodyParts.map((item) =>{
                         let result = item.split('').map((char, index) =>  index === 0 ? char.toUpperCase() : char).join('');
-                    return(<li key={item.id || item}>{result}</li>)
+                    return(<li onClick={()=>{
+                         setBodyPart({item});
+                         setEquipment('all');
+                         setTargetMuscle('all');
+                    }}
+                     key={item.id || item}>{result}</li>)
                 })}
                 </ul>
             </div>
@@ -36,7 +41,11 @@ export default function ExerciseList() {
                 {      
                     targetMuscles.map((item) =>{
                         let result = item.split('').map((char, index) =>  index === 0 ? char.toUpperCase() : char).join('');
-                    return(<li key={item.id || item}>{result}</li>)
+                    return(<li onClick={()=>{
+                        setEquipment('all');
+                        setTargetMuscle({item});
+                        setBodyPart('all');
+                    }} key={item.id || item}>{result}</li>)
                 })}
                 </ul>
             </div>
@@ -44,9 +53,13 @@ export default function ExerciseList() {
                 <h1>Equipment</h1>
                 <ul>
                 {      
-                    equipment.map((item) =>{
+                    equipments.map((item) =>{
                         let result = item.split('').map((char, index) =>  index === 0 ? char.toUpperCase() : char).join('');
-                    return(<li key={item.id || item}>{result}</li>)
+                    return(<li  onClick={()=>{
+                        setEquipment({item});
+                        setTargetMuscle('all');
+                        setBodyPart('all');
+                    }} key={item.id || item}>{result}</li>)
                 })}
                 </ul>
             </div>
