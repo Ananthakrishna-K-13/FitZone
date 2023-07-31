@@ -5,6 +5,10 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    border-bottom-color:#ddd ;
+    border-bottom-style:solid ;
+    border-bottom-width: 1px;
+    padding-bottom: 4vh;
 }
 h1{
     font-family: var(--ff-h);

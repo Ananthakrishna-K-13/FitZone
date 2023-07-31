@@ -1,0 +1,43 @@
+.outer-container{
+    padding-top: 3vh;
+    width: 100vw;
+    height: auto;
+    display: flex;
+}
+.filterbar{
+    width: 18vw;
+    border-right-color: #ddd;
+    border-right-width: 1px;
+    border-right-style: solid;
+    padding-left: 1vw;
+}
+.itemlist{
+    width: 82vw;
+}
+.itemlist h1{
+    text-align: left;
+    padding-inline-start: 2vw;
+    font-family: var(--ff-h);
+}
+.filterbar h1{
+    font-family: var(--ff-h);
+    font-size: 20px;
+    text-align: left;
+    padding-bottom: 0.75vh;
+    font-weight: 700;
+}
+.filter-container{
+    padding-bottom: 3vh;
+}
+li{
+    font-size: 15px;
+    font-family: var(--ff-p);
+    padding-left: 1vw;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    height: 2.5vh;
+}
+li:hover{
+    text-decoration: underline;
+}
