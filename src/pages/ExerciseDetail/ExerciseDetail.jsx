@@ -453,7 +453,7 @@ export default function ExerciseDetail() {
       let EquipmentData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/equipment/${exerciseDetailData.equipment}`,exerciseOptions);
       setSimilarEquipmentData(EquipmentData);
       let videosData = await fetchData(`https://youtube-search-and-download.p.rapidapi.com/search?query=${exerciseDetailData.name}`,youtubeOptions);
-      setExerciseVideos(videosData);
+      setExerciseVideos(videosData.contents);
     }
     fetchDetailData();
   }, [exerciseId]) */

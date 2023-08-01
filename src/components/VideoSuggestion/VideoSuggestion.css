@@ -1,0 +1,10 @@
+.VideoSuggestion-container{
+    height: 60vh;
+}
+.video-container{
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

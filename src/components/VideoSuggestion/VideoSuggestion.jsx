@@ -4,9 +4,12 @@ import VideoCard from '../VideoCard/VideoCard'
 
 export default function VideoSuggestion({videos}) {
   return (
-    <div>
+    <div className='VideoSuggestion-container'>
       <h1>YT vidoes related to the exercise</h1>
-      <div className='video-continer'>
+      <div className='video-container'>
+        {videos.contents.slice(0,3).map((item)=>{
+          return(<VideoCard item={item}/>)
+        })}
       </div>
     </div>
   )
