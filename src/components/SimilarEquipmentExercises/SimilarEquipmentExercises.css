@@ -1,0 +1,19 @@
+.similar-container{
+    width: 100vw;
+    padding-top: 4vh;
+}
+.similar-card-container{
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 7vw;
+}
+.similar-container .similar-heading{
+    text-align: left;
+    padding-inline-start: 8vw;
+    font-weight: 400;
+    font-family: var(--ff-h);
+    font-size: 3vh;
+}
+

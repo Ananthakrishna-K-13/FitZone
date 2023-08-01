@@ -1,8 +1,19 @@
 import React from 'react'
 import './SimilarMuscleExercises.css'
+import SimilarCard from '../SimilarCard/SimilarCard';
 
-export default function SimilarMuscleExercises() {
+export default function SimilarMuscleExercises({exercises}) {
+    let display = exercises.slice(0,5);
   return (
-    <div>SimilarMuscleExercises</div>
+    <div className='similar-container'>
+        <h1 className='similar-heading'>Exercises which enhance the same muscle:</h1>
+        <div className='similar-card-container'>
+        {display.map((element) =>
+            {
+                return(<SimilarCard element={element}/>)
+            }
+        )}
+        </div>
+    </div>
   )
 }
