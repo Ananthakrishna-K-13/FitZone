@@ -1,0 +1,40 @@
+.detail-container{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    padding: 4vh;
+    align-items: center;
+    justify-content: center;
+
+}
+.detail-container img{
+    width: 28%;
+    height: 90%;
+    border: 2px solid #ddd;
+    border-radius: 7px;
+}
+.detail-text{
+    width: 60vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 9vh;
+    align-items: center;
+    padding-inline: 15vh;
+}
+.detail-text h1{
+    padding-bottom: 8vh;
+    padding-top: 6vh;
+    font-size: 6.5vh;
+    font-family: var(--ff-h);
+    text-align: center;
+}
+.detail-text p{
+    font-size: 3vh;
+    text-align: center;
+    font-family: var(--ff-p);
+}
+.detail-text span{
+    font-weight: 700;
+    font-size: 4vh;
+}

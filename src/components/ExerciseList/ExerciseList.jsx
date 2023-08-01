@@ -84,7 +84,7 @@ export default function ExerciseList({bodyPart, setBodyPart, targetMuscle, setTa
             <h1>Results:</h1>
             <div className='card-container'>
                 {
-                    /* exercisesToDisplay */output.map((element)=>{
+                    /* exercisesToDisplay */ output.map((element)=>{
                         return(
                             <ExerciseCard element={element} key={element.id} />
                         )
