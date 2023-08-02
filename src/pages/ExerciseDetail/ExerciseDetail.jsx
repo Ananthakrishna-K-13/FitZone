@@ -17,8 +17,8 @@ export default function ExerciseDetail() {
     "id": "0765",
     "name": "smith seated shoulder press",
     "target": "delts"
-  })
-  const [similarMusclesData, setSimilarMusclesData] = useState([
+  }/* {} */)
+  const [similarMusclesData, setSimilarMusclesData] = useState( [
     {
       "bodyPart": "waist",
       "equipment": "body weight",
@@ -58,81 +58,9 @@ export default function ExerciseDetail() {
       "id": "2135",
       "name": "weighted front plank",
       "target": "abs"
-    },
-    {
-      "bodyPart": "waist",
-      "equipment": "weighted",
-      "gifUrl": "https://api.exercisedb.io/image/snreguvYfYFTYT",
-      "id": "0866",
-      "name": "weighted hanging leg-hip raise",
-      "target": "abs"
-    },
-    {
-      "bodyPart": "waist",
-      "equipment": "weighted",
-      "gifUrl": "https://api.exercisedb.io/image/NL3ERumCwRe1Jy",
-      "id": "0840",
-      "name": "weighted overhead crunch (on stability ball)",
-      "target": "abs"
-    },
-    {
-      "bodyPart": "waist",
-      "equipment": "weighted",
-      "gifUrl": "https://api.exercisedb.io/image/6iqBhf4Z2WbVcC",
-      "id": "0846",
-      "name": "weighted russian twist",
-      "target": "abs"
-    },
-    {
-      "bodyPart": "waist",
-      "equipment": "weighted",
-      "gifUrl": "https://api.exercisedb.io/image/Hf9uNg0-zQFG8L",
-      "id": "0845",
-      "name": "weighted russian twist (legs up)",
-      "target": "abs"
-    },
-    {
-      "bodyPart": "waist",
-      "equipment": "weighted",
-      "gifUrl": "https://api.exercisedb.io/image/abaGHzQ7Rb94Lb",
-      "id": "2371",
-      "name": "weighted russian twist v. 2",
-      "target": "abs"
-    },
-    {
-      "bodyPart": "waist",
-      "equipment": "weighted",
-      "gifUrl": "https://api.exercisedb.io/image/T4U3UUqsxovj51",
-      "id": "0849",
-      "name": "weighted seated twist (on stability ball)",
-      "target": "abs"
-    },
-    {
-      "bodyPart": "waist",
-      "equipment": "weighted",
-      "gifUrl": "https://api.exercisedb.io/image/3sRcrnjmEsDxnT",
-      "id": "0850",
-      "name": "weighted side bend (on stability ball)",
-      "target": "abs"
-    },
-    {
-      "bodyPart": "waist",
-      "equipment": "wheel roller",
-      "gifUrl": "https://api.exercisedb.io/image/vdCdSkQ74fugfI",
-      "id": "0857",
-      "name": "wheel rollerout",
-      "target": "abs"
-    },
-    {
-      "bodyPart": "waist",
-      "equipment": "body weight",
-      "gifUrl": "https://api.exercisedb.io/image/U9b2nDEUEG3Oaj",
-      "id": "0858",
-      "name": "wind sprints",
-      "target": "abs"
     }
-  ])
-  const [similarBodyPartData, setSimilarBodyPartData] = useState([{
+  ]/* [] */ )
+  const [similarBodyPartData, setSimilarBodyPartData] = useState([ {
     "bodyPart": "waist",
     "equipment": "body weight",
     "gifUrl": "https://api.exercisedb.io/image/HjOliWF24iSTZi",
@@ -171,16 +99,8 @@ export default function ExerciseDetail() {
     "id": "2135",
     "name": "weighted front plank",
     "target": "abs"
-  },
-  {
-    "bodyPart": "waist",
-    "equipment": "weighted",
-    "gifUrl": "https://api.exercisedb.io/image/snreguvYfYFTYT",
-    "id": "0866",
-    "name": "weighted hanging leg-hip raise",
-    "target": "abs"
-  },])
-  const [similarEquipmentData, setSimilarEquipmentData] = useState([{
+  }]/* [] */)
+  const [similarEquipmentData, setSimilarEquipmentData] = useState( {
     "bodyPart": "waist",
     "equipment": "body weight",
     "gifUrl": "https://api.exercisedb.io/image/HjOliWF24iSTZi",
@@ -219,16 +139,8 @@ export default function ExerciseDetail() {
     "id": "2135",
     "name": "weighted front plank",
     "target": "abs"
-  },
-  {
-    "bodyPart": "waist",
-    "equipment": "weighted",
-    "gifUrl": "https://api.exercisedb.io/image/snreguvYfYFTYT",
-    "id": "0866",
-    "name": "weighted hanging leg-hip raise",
-    "target": "abs"
-  },])
-  const [exerciseVideos, setExerciseVideos] = useState({
+  }/* [] */)
+  const [exerciseVideos, setExerciseVideos] = useState( {
     "contents": [
       {
         "video": {
@@ -344,119 +256,30 @@ export default function ExerciseDetail() {
           "videoId": "EPXbWEFQ008",
           "viewCountText": "3,498,058 views"
         }
-      },
-      {
-        "video": {
-          "channelId": "UCEs2VOQBfaeuYRHOFnzUNEg",
-          "channelName": "ABS TV Antigua",
-          "description": "Jaycees Queen Show 2023.",
-          "lengthText": "4:37:46",
-          "publishedTimeText": "Streamed 5 hours ago",
-          "thumbnails": [
-            {
-              "height": 202,
-              "url": "https://i.ytimg.com/vi/96_zQgxbCJk/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDi7_MlY9hH08aSDlQBulwGg_SGUw",
-              "width": 360
-            },
-            {
-              "height": 404,
-              "url": "https://i.ytimg.com/vi/96_zQgxbCJk/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCDaaVZ_96fQ73NCQMPFh1xPsV2Kw",
-              "width": 720
-            }
-          ],
-          "title": "Jaycees Queen Show 2023",
-          "videoId": "96_zQgxbCJk",
-          "viewCountText": "74,414 views"
-        }
-      },
-      {
-        "video": {
-          "channelId": "UCiP6wD_tYlYLYh3agzbByWQ",
-          "channelName": "FitnessBlender",
-          "description": "Fitness Blender's Workout Programs and subscription platform, FB Plus, make it possible to keep our individual workout videos ...",
-          "lengthText": "10:31",
-          "publishedTimeText": "10 years ago",
-          "thumbnails": [
-            {
-              "height": 202,
-              "url": "https://i.ytimg.com/vi/MrV4vCotio0/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDYe-RpgvBIF7PaZPbhsfovk2hC9w",
-              "width": 360
-            },
-            {
-              "height": 404,
-              "url": "https://i.ytimg.com/vi/MrV4vCotio0/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAMngN4ofG958Hs2-ffRliNaBO6-A",
-              "width": 720
-            }
-          ],
-          "title": "10 Minute Abs Workout - Fitness Blender Abs and Obliques Routine",
-          "videoId": "MrV4vCotio0",
-          "viewCountText": "20,978,135 views"
-        }
-      },
-      {
-        "video": {
-          "channelId": "UCa_JUG9hl8D7S6jH7nWTURA",
-          "channelName": "getfitbyivana",
-          "description": "MY *2022* BOOTY BOOST PROGRAM: https://getfitbyivana.com **Purchase my current (2022) \"Booty Boost Bundle\" today and ...",
-          "lengthText": "8:38",
-          "publishedTimeText": "21 hours ago",
-          "thumbnails": [
-            {
-              "height": 202,
-              "url": "https://i.ytimg.com/vi/MRZfeF2yRlQ/hq720.jpg?sqp=-oaymwEjCOgCEMoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBojL12Ez8S9JpsWWoJ8np4sFS1Xg",
-              "width": 360
-            },
-            {
-              "height": 404,
-              "url": "https://i.ytimg.com/vi/MRZfeF2yRlQ/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCi6FrFHyHpeJ_KICpR9MrxdvxnmQ",
-              "width": 720
-            }
-          ],
-          "title": "DO THIS EVERYDAY to Lose Belly Fat & Get Abs - Lower Abs Workout, At Home, No Equipment",
-          "videoId": "MRZfeF2yRlQ",
-          "viewCountText": "11,200 views"
-        }
-      },
-      {
-        "video": {
-          "channelId": "UCSoKaD27LRI9nBPJ2KB1lnQ",
-          "channelName": "Alexis Ren",
-          "description": "it was late when i filmed this so excuse my giggles and imperfect technique haha I try to do this every morning. it's quick, to the ...",
-          "lengthText": "9:57",
-          "publishedTimeText": "5 years ago",
-          "thumbnails": [
-            {
-              "height": 270,
-              "url": "https://i.ytimg.com/vi/cbCt69XAUKA/hqdefault.jpg?sqp=-oaymwEjCOADEI4CSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC9AHhVkruIMQkqOju3lPEJUGLYQQ",
-              "width": 480
-            }
-          ],
-          "title": "10 MINUTE AB WORKOUT | ALEXIS REN",
-          "videoId": "cbCt69XAUKA",
-          "viewCountText": "55,805,011 views"
-        }
       }
     ],
     "estimatedResults": "39288565",
     "next": "EpYDEgNhYnMajgNTQlNDQVF0VVR6RnJWamsxTjFwa1JZSUJDMU14UjFaeVdVaEVNR1J2Z2dFTGNESjZWREpJUVZKdWRHdUNBUXRQU0ZOWk5FbzRkMTl3VllJQkN6SndURlF0YjJ4blZVcHpnZ0VMYUhocVMxcGpUMVF4TjBXQ0FRdFBaazFMTVhJME1VcDZNSUlCQzBWbVNqUmhRbDlsYmxaRmdnRUxXR2RKWDNBNFlrdG5OemlDQVF0V2VHaE9ibTVZWW5CR1NZSUJDMlZGU2twbFZFUm9XWEZGZ2dFTE56YzVha2swVW5kc05XT0NBUXQ1VmxGR1gxWnlYMWhEUllJQkMwcE9ZVVIxZVZSS1lWVlZnZ0VMTXpGUE56QmphM1paTTJPQ0FRdEZVRmhpVjBWR1VUQXdPSUlCQ3prMlgzcFJaM2hpUTBwcmdnRUxUWEpXTkhaRGIzUnBiekNDQVF0TlVscG1aVVl5ZVZKc1VZSUJDMk5pUTNRMk9WaEJWVXRCc2dFR0NnUUlHQkFDNmdFQ0NBSSUzRBiB4OgYIgtzZWFyY2gtZmVlZA%3D%3D"
-  })
+  } /* {"contents":[]} */)
 
   const {exerciseId} = useParams();
- /*  useEffect(() => {
+  /* useEffect(() => {
     const fetchDetailData = async ()=>{
       let exerciseDetailData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/exercise/${exerciseId}`, exerciseOptions);
       setDetailToDisplay(exerciseDetailData);
+      let videosData = await fetchData(`https://youtube-search-and-download.p.rapidapi.com/search?query=${exerciseDetailData.name.split(' ').join('%20')}%20exercise`,youtubeOptions);
+      setExerciseVideos(videosData);
+      console.log(videosData)
       let MusclesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/target/${exerciseDetailData.target}`,exerciseOptions);
       setSimilarMusclesData(MusclesData);
       let BodyPartData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${exerciseDetailData.bodyPart}`,exerciseOptions);
       setSimilarBodyPartData(BodyPartData);
       let EquipmentData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/equipment/${exerciseDetailData.equipment}`,exerciseOptions);
       setSimilarEquipmentData(EquipmentData);
-      let videosData = await fetchData(`https://youtube-search-and-download.p.rapidapi.com/search?query=${exerciseDetailData.name}`,youtubeOptions);
-      setExerciseVideos(videosData.contents);
     }
     fetchDetailData();
-  }, [exerciseId]) */
+  }, [exerciseId]) */ 
+  /* Commented to save API free use */
   
   return (
     <div>

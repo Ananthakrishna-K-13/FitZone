@@ -32,7 +32,8 @@ export default function ExerciseList({bodyPart, setBodyPart, targetMuscle, setTa
         setExercisesToDisplay(dataToShow);
     }
     fetchDataToShow();
-    }, [bodyPart, targetMuscle, equipment]) */   
+    }, [bodyPart, targetMuscle, equipment]) */
+
   return (
     <div className='outer-container'>
         <div className='filterbar'>

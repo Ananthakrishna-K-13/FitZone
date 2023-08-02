@@ -3,19 +3,42 @@
     height: 35vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 3vh;
-    border-radius:10px;
+    margin: 2.7vh;
+    border-radius:20px;
 }
 .vcard-cont img{
     width: 100%;
     height: 60% ;
-    border-radius: 10px;
+    border-radius:20px;
     padding-bottom:1vh ;
+    display: block;
 }
 .vcard-cont h1{
     width: 100%;
     font-size: 1.9vh;
     text-align: left;
     padding-left: 0.2vw;
+    font-family: var(--ff-p);
+    font-weight: 700;
+    padding-bottom: 0.1vh;
+}
+.vcard-cont:hover{
+   border-radius: 0; 
+}
+.vcard-cont p{
+    color: #444;
+    font-size: 1.6vh;
+    width: 100%;
+    text-align: left;
+    padding-left: 0.2vw;
+    padding-top: 0vh;
+}
+.vcard-cont span{
+    background-color: black;
+    width: 2.3vw;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.5vh;
+    margin-left: 0.2vw;
 }
