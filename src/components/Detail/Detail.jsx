@@ -15,6 +15,7 @@ export default function Detail({detailToDisplay}) {
         <div className='detail-text'>
             <h1>{capfirst(detailToDisplay.name)}</h1>
             <p>This exercise targets the <span>{bodypart}</span>. It enhances the <span>{targetmuscle}</span>, and utilizes <span>{equip}</span> for optimal effectiveness.</p>
+            <p className='instruct'>Scroll below for similar exercises and more information.</p>
         </div>
     </div>
   )

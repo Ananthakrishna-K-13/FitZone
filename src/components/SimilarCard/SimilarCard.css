@@ -37,3 +37,6 @@ a{
     padding: 0.1vh;
     font-size: 1.6vh;
 }
+.similar-card:hover{
+    border: 1px solid black ;
+}

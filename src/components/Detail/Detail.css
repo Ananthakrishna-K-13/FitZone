@@ -31,10 +31,14 @@
 }
 .detail-text p{
     font-size: 3vh;
-    text-align: center;
+    text-align: left;
     font-family: var(--ff-p);
 }
 .detail-text span{
     font-weight: 700;
     font-size: 4vh;
+}
+.detail-text .instruct{
+    width: 100%;
+    text-align: left;
 }

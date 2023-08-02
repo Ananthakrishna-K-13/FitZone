@@ -13,7 +13,7 @@ export default function Hero() {
         <div className='text'>
               <h1>Sweat, Smile </h1>
               <h1 className='bottom-text'> and Repeat</h1>
-              <p>Check out the most effeective exercises without the need for a trainer</p>
+              <p>Explore highly effective exercises without the need for a trainer.</p>
               <div className='explore-button'>
                 <Link className='btn-txt' to='/exercises'>Explore Now   <i class='bx bx-right-arrow' ></i></Link>
               </div>

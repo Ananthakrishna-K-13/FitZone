@@ -22,7 +22,7 @@
     font-weight: 700;
     padding-bottom: 0.1vh;
 }
-.vcard-cont:hover{
+.vcard-cont img:hover{
    border-radius: 0; 
 }
 .vcard-cont p{

@@ -23,8 +23,8 @@ export default function SearchBar({setExercisesToDisplay}) {
   return (
     <div className="form">
       <h1>
-        Search for Exercises, Body Parts,
-        <br /> Target Muscles or Equipments
+        Discover over 1300 exercises
+        <br /> and explore your fitness potential.
       </h1>
       <div className="search-div">
         <input
@@ -32,7 +32,7 @@ export default function SearchBar({setExercisesToDisplay}) {
           className="search"
           value={search}
           onChange={(evnt)=> setSearch(evnt.target.value.toLowerCase())}
-          placeholder="Search"
+          placeholder="Search Exercises, Body parts, Muscles or Equipments."
         />
         <button type="submit" onClick={handleSearch}>Search</button>
       </div>

@@ -100,7 +100,7 @@ export default function ExerciseDetail() {
     "name": "weighted front plank",
     "target": "abs"
   }]/* [] */)
-  const [similarEquipmentData, setSimilarEquipmentData] = useState( {
+  const [similarEquipmentData, setSimilarEquipmentData] = useState( [{
     "bodyPart": "waist",
     "equipment": "body weight",
     "gifUrl": "https://api.exercisedb.io/image/HjOliWF24iSTZi",
@@ -139,7 +139,7 @@ export default function ExerciseDetail() {
     "id": "2135",
     "name": "weighted front plank",
     "target": "abs"
-  }/* [] */)
+  }]/* [] */)
   const [exerciseVideos, setExerciseVideos] = useState( {
     "contents": [
       {
