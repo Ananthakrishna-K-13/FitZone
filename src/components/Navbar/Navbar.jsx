@@ -12,6 +12,14 @@ export default function Navbar() {
         <div className='routes'>
             <Link to='/' className='Link'>Home</Link>
             <Link to='/exercises' className='Link'>Exercises</Link>
+            <div className='dropdown'>
+              <span>Utilities<i class='bx bx-chevron-down'></i></span>
+                <div className="dropdown-list">
+                  <Link to='/bmi'>BMI calculator</Link>
+                  <Link to='/weight'>Ideal Weight</Link>
+                  <Link to='/calorie'>Daily calorie reqirement</Link>
+                </div>
+            </div>
         </div>
     </div>
   )

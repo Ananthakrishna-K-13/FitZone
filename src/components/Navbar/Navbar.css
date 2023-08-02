@@ -37,3 +37,37 @@
     color: black;
     border-bottom: 3px solid red;
 }
+.routes span{
+    font-family: var(--ff-h);
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    border-bottom: 3px solid red;
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+.dropdown-list{
+    position: absolute;
+    top: 3vh;
+    display: none;
+    font-family: var(--ff-h);
+    font-weight: 700;
+    font-size: 20px;
+    padding-top: 3vh;
+    width: 260px;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown:hover .dropdown-list{
+        display: block;
+}
+.dropdown a{
+    display:inline-block;
+    padding-top: 1.5vh;
+    border-bottom: 3px solid red;
+}
+.dropdown a:hover{
+    font-size: 22px;
+}

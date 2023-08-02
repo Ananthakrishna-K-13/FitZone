@@ -4,7 +4,9 @@ import Home from './pages/Home/Home';
 import Exercises from './pages/Exercises/Exercises';
 import ExerciseDetail from './pages/ExerciseDetail/ExerciseDetail';
 import ScrollToTop from './ScrollToTop';
-import Utilities from './pages/Utilities/Utilities';
+import BMICalcultor from './pages/BMICalculator/BMICalcultor';
+import IdealWeightCalculator from './pages/IdealWeightCalculator/IdealWeightCalculator';
+import DCRCalculator from './pages/DCRCalculator/DCRCalculator';
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/exercises' element={<Exercises/>}/>
         <Route path='/exercise/:exerciseId' element={<ExerciseDetail/>}/>
-        <Route path='/utilities' element={<Utilities/>}/>
+        <Route path='/bmi' element={<BMICalcultor/>}/>
+        <Route path='/calorie'element={<DCRCalculator/>} />
+        <Route path='/weight' element={<IdealWeightCalculator/>}/>
       </Routes>
     </Router>
     </>

@@ -52,6 +52,9 @@
     color: #ffe3e4;
     padding-top: 0vh;
 }
+.subtext:hover{
+    color: #ffc3c4;
+}
 .explore-button{
     background-color: black;
     width: 8vw;
