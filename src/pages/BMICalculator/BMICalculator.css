@@ -1,0 +1,88 @@
+.bmi-cont{
+    width: 100vw;
+    height: 85vh;
+    height: inherit;
+    display: flex;
+}
+.bmi-form{
+    width: 50vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 4vh;
+    padding: 6vh;
+    padding-top: 15vh;
+}
+.bmi-img{
+    width: 50vw;
+    height: 85vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 7vw;
+    padding-top: 9vh;
+}
+.bmi-img img{
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px #aaa ;
+    display: block;
+}
+.bmi-img img:hover{
+    box-shadow: 11px 11px 5px #888;
+}
+.param{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+.param p{
+    width: 40%;
+    font-family: var(--ff-h);
+    text-align: center;
+    font-size: 2.2vh;
+    font-weight: 700;
+}
+.bmi-btn{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 15vw;
+    height: 6vh;
+    font-family: var(--ff-h);
+    font-weight: 700;
+    background-color: #a89ab9;
+    cursor: pointer;
+    margin-left: 20vw;
+    color: white;
+}
+.bmi-btn:hover{
+    background-color: #988aa9;
+}
+.result{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50vw;
+    height: 85vh;
+    gap: 3vh;
+}
+.result h1{
+    font-size: 4vh;
+}
+.result span{
+    font-size: 6vh;
+}
+.spinner-bmi{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 85vh;
+}
+.spinner-bmi img{
+    width: 10vw;
+    height: 10vw;
+}

@@ -3,7 +3,7 @@ import './Detail.css'
 
 export default function Detail({detailToDisplay}) {
   const capfirst=(string)=>{
-    string = string.charAt(0).toUpperCase()+string.slice(1);
+    string = string?.charAt(0).toUpperCase()+string?.slice(1);
     return string
   }
   let bodypart = capfirst(detailToDisplay.bodyPart)

@@ -8,17 +8,18 @@ import SimilarMuscleExercises from '../../components/SimilarMuscleExercises/Simi
 import SimilarBodyPartExercises from '../../components/SimilarBodyPartExercises/SimilarBodyPartExercises';
 import SimilarEquipmentExercises from '../../components/SimilarEquipmentExercises/SimilarEquipmentExercises';
 import VideoSuggestion from '../../components/VideoSuggestion/VideoSuggestion';
+import LoadingBar from 'react-top-loading-bar'
 
 export default function ExerciseDetail() {
-  const [detailToDisplay, setDetailToDisplay] = useState({
+  const [detailToDisplay, setDetailToDisplay] = useState(/* {
     "bodyPart": "shoulders",
     "equipment": "smith machine",
     "gifUrl": "https://api.exercisedb.io/image/iJAwG6Fk5PYkPv",
     "id": "0765",
     "name": "smith seated shoulder press",
     "target": "delts"
-  }/* {} */)
-  const [similarMusclesData, setSimilarMusclesData] = useState( [
+  } */{})
+  const [similarMusclesData, setSimilarMusclesData] = useState(/*  [
     {
       "bodyPart": "waist",
       "equipment": "body weight",
@@ -59,8 +60,8 @@ export default function ExerciseDetail() {
       "name": "weighted front plank",
       "target": "abs"
     }
-  ]/* [] */ )
-  const [similarBodyPartData, setSimilarBodyPartData] = useState([ {
+  ] */[] )
+  const [similarBodyPartData, setSimilarBodyPartData] = useState(/* [ {
     "bodyPart": "waist",
     "equipment": "body weight",
     "gifUrl": "https://api.exercisedb.io/image/HjOliWF24iSTZi",
@@ -99,8 +100,8 @@ export default function ExerciseDetail() {
     "id": "2135",
     "name": "weighted front plank",
     "target": "abs"
-  }]/* [] */)
-  const [similarEquipmentData, setSimilarEquipmentData] = useState( [{
+  }] */[])
+  const [similarEquipmentData, setSimilarEquipmentData] = useState( /* [{
     "bodyPart": "waist",
     "equipment": "body weight",
     "gifUrl": "https://api.exercisedb.io/image/HjOliWF24iSTZi",
@@ -139,8 +140,8 @@ export default function ExerciseDetail() {
     "id": "2135",
     "name": "weighted front plank",
     "target": "abs"
-  }]/* [] */)
-  const [exerciseVideos, setExerciseVideos] = useState( {
+  }] */[])
+  const [exerciseVideos, setExerciseVideos] = useState( /* {
     "contents": [
       {
         "video": {
@@ -260,30 +261,37 @@ export default function ExerciseDetail() {
     ],
     "estimatedResults": "39288565",
     "next": "EpYDEgNhYnMajgNTQlNDQVF0VVR6RnJWamsxTjFwa1JZSUJDMU14UjFaeVdVaEVNR1J2Z2dFTGNESjZWREpJUVZKdWRHdUNBUXRQU0ZOWk5FbzRkMTl3VllJQkN6SndURlF0YjJ4blZVcHpnZ0VMYUhocVMxcGpUMVF4TjBXQ0FRdFBaazFMTVhJME1VcDZNSUlCQzBWbVNqUmhRbDlsYmxaRmdnRUxXR2RKWDNBNFlrdG5OemlDQVF0V2VHaE9ibTVZWW5CR1NZSUJDMlZGU2twbFZFUm9XWEZGZ2dFTE56YzVha2swVW5kc05XT0NBUXQ1VmxGR1gxWnlYMWhEUllJQkMwcE9ZVVIxZVZSS1lWVlZnZ0VMTXpGUE56QmphM1paTTJPQ0FRdEZVRmhpVjBWR1VUQXdPSUlCQ3prMlgzcFJaM2hpUTBwcmdnRUxUWEpXTkhaRGIzUnBiekNDQVF0TlVscG1aVVl5ZVZKc1VZSUJDMk5pUTNRMk9WaEJWVXRCc2dFR0NnUUlHQkFDNmdFQ0NBSSUzRBiB4OgYIgtzZWFyY2gtZmVlZA%3D%3D"
-  } /* {"contents":[]} */)
+  } */ {"contents":[]})
+  const [progress, setProgress] = useState(0)
 
   const {exerciseId} = useParams();
-  /* useEffect(() => {
+   useEffect(() => {
     const fetchDetailData = async ()=>{
+      console.log(exerciseId)
+      setProgress(10);
       let exerciseDetailData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/exercise/${exerciseId}`, exerciseOptions);
       setDetailToDisplay(exerciseDetailData);
+      setProgress(30)
       let videosData = await fetchData(`https://youtube-search-and-download.p.rapidapi.com/search?query=${exerciseDetailData.name.split(' ').join('%20')}%20exercise`,youtubeOptions);
       setExerciseVideos(videosData);
-      console.log(videosData)
+      setProgress(50)
       let MusclesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/target/${exerciseDetailData.target}`,exerciseOptions);
       setSimilarMusclesData(MusclesData);
+      setProgress(70)
       let BodyPartData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${exerciseDetailData.bodyPart}`,exerciseOptions);
       setSimilarBodyPartData(BodyPartData);
+      setProgress(100)
       let EquipmentData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/equipment/${exerciseDetailData.equipment}`,exerciseOptions);
       setSimilarEquipmentData(EquipmentData);
     }
     fetchDetailData();
-  }, [exerciseId]) */ 
+  }, [exerciseId]) 
   /* Commented to save API free use */
   
   return (
     <div>
       <Navbar/>
+      <LoadingBar color='#f11946' height={6} progress={progress}/>
       <Detail detailToDisplay={detailToDisplay}/>
       <VideoSuggestion videos={exerciseVideos}/>
       <SimilarMuscleExercises exercises={similarMusclesData}/>

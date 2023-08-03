@@ -1,38 +1,46 @@
 import React, { useEffect, useState } from 'react'
 import './ExerciseList.css'
 import { exerciseOptions, fetchData } from '../../fetchData'
-import output from '../../sampleoutput.json' 
 import ExerciseCard from '../ExerciseCard/ExerciseCard'
 
-export default function ExerciseList({bodyPart, setBodyPart, targetMuscle, setTargetMuscle, equipment, setEquipment, exercisesToDisplay, setExercisesToDisplay}) {
+export default function ExerciseList({bodyPart, setBodyPart, targetMuscle, setTargetMuscle, equipment, setEquipment, exercisesToDisplay, setExercisesToDisplay, setProgress}) {
     const [bodyParts, setBodyParts] = useState([])
     const [targetMuscles, setTargetMuscles] = useState([])
     const [equipments, setEquipments] = useState([])
     
-    /* useEffect(() => {
+    useEffect(() => {
         const fetchFilterData = async() =>{
+            setProgress(10);
             let dataBodyParts = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList',exerciseOptions);
+            setProgress(40)
             let dataTargetMuscles = await fetchData('https://exercisedb.p.rapidapi.com/exercises/targetList',exerciseOptions);
+            setProgress(70)
             let dataEquipment = await fetchData('https://exercisedb.p.rapidapi.com/exercises/equipmentList',exerciseOptions);
             setBodyParts([...dataBodyParts])
             setTargetMuscles([...dataTargetMuscles])
             setEquipments([...dataEquipment])
+            setProgress(100)
         }
         fetchFilterData();
     }, []) 
     useEffect(() => {
         setExercisesToDisplay([])
+        setProgress(10);
         const fetchDataToShow = async()=>
         {
         let dataToShow = [];
+        setProgress(50)
         if(bodyPart!=='all') dataToShow = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart.item}`, exerciseOptions);
-        else if(targetMuscle!=='all') dataToShow = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/target/${targetMuscle.item}`, exerciseOptions);
+        else if(targetMuscle!=='all') dataToShow = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/target/${targetMuscle.item}`, 
+        exerciseOptions);
         else if(equipment!=='all') dataToShow = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/equipment/${equipment.item}`, exerciseOptions);
         else dataToShow = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+        setProgress(100)
         setExercisesToDisplay(dataToShow);
     }
     fetchDataToShow();
-    }, [bodyPart, targetMuscle, equipment]) */
+    setProgress(100)
+    }, [bodyPart, targetMuscle, equipment])
 
   return (
     <div className='outer-container'>
@@ -85,7 +93,7 @@ export default function ExerciseList({bodyPart, setBodyPart, targetMuscle, setTa
             <h1>Results:</h1>
             <div className='card-container'>
                 {
-                    /* exercisesToDisplay */ output.map((element)=>{
+                    exercisesToDisplay.map((element)=>{
                         return(
                             <ExerciseCard element={element} key={element.id} />
                         )
