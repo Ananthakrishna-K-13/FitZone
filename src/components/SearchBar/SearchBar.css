@@ -43,6 +43,12 @@ button{
     background-color: black;
     color: white;
     border-radius: 0.5rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.5s;
+}
+button:hover{
+    opacity: 1;
 }
 .search-div{
     display: flex;

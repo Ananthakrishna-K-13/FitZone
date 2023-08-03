@@ -16,7 +16,7 @@
 .image img{
     width: auto;
     height: 70vh;
-    border-radius: 0 0 90px 0;
+    border-radius: 50px ;
     display: block;
     z-index: 10;
 }
@@ -52,7 +52,7 @@
     color: #ffe3e4;
     padding-top: 0vh;
 }
-.subtext:hover{
+.subtext span:hover{
     color: #ffc3c4;
 }
 .explore-button{
@@ -63,10 +63,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.2s;
+}
+.explore-button:hover{
+    border: white solid 2px;
+    outline: black solid 2px;
 }
 .btn-txt{
     font-family: var(--ff-p);
     text-decoration: none;
     color: white;
     font-size: 18px;
+    font-size: 700;
 }

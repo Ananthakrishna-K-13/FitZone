@@ -4,6 +4,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import image from '../../assets/image.png'
 import { calculatorOptions, fetchData } from '../../fetchData';
 import spinner from '../../assets/spinner.gif'
+import 'animate.css'
 
 export default function DCRCalculator() {
   const [gender, setGender] = useState('');
@@ -30,7 +31,7 @@ export default function DCRCalculator() {
     <div>
         <Navbar/>
         <div className='bmi-cont'>
-          <div className='bmi-form' id="bmi-frm">
+          <div className='bmi-form animate__animated animate__fadeInLeft' id="bmi-frm">
               <div className='param'>
                 <p>Enter your age:</p>
                 <input type="text" value={age} onChange={(evnt)=>setAge(evnt.target.value)}/>
@@ -60,7 +61,7 @@ export default function DCRCalculator() {
                 <img src={spinner} alt="Loading..." />
               </div>
            <div className='bmi-img'>
-              <img src={image} alt="bmi" />
+              <img src={image} className=' animate__animated animate__fadeInRight' alt="bmi" />
           </div>
         </div>
     </div>

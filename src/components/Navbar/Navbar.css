@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 7%;
+    gap: 6%;
     padding-right: 20rem;
 }
 .Link{
@@ -35,17 +35,38 @@
     font-size: 20px;
     font-weight: 600;
     color: black;
-    border-bottom: 3px solid red;
+    position: relative;
+    overflow: hidden;
+}
+.Link::after{
+    content: '';
+    display: block;
+    height: 4px;
+    background-color: red;
+    transform: scaleX(0);
+    transition: all 0.5s;
+    transform-origin: 0;
+}
+.routes span::after{
+    content: '';
+    display: block;
+    height: 4px;
+    background-color: red;
+    transform: scaleX(0);
+    transition: all 0.5s;
+    transform-origin: 0;
 }
 .routes span{
     font-family: var(--ff-h);
     font-size: 20px;
     font-weight: 600;
     color: black;
-    border-bottom: 3px solid red;
     cursor: pointer;
     display: block;
     position: relative;
+}
+.routes span:hover::after{
+    transform: scaleX(1);
 }
 .dropdown-list{
     position: absolute;
@@ -54,20 +75,24 @@
     font-family: var(--ff-h);
     font-weight: 700;
     font-size: 20px;
-    padding-top: 0.5vh;
+    padding-top: 1.5vh;
     width: 260px;
 }
 .dropdown{
     position: relative;
+    transition: all 20s;
 }
 .dropdown:hover .dropdown-list{
         display: block;
 }
 .dropdown a{
     display:inline-block;
-    padding-top: 1.5vh;
-    border-bottom: 3px solid red;
+    padding-top: 1.25vh;
+    transition: all 0.3s;
 }
 .dropdown a:hover{
     font-size: 22px;
+}
+.Link:hover::after{
+    transform: scaleX(1);
 }
