@@ -32,8 +32,9 @@
 }
 .text h1{
     font-family: var(--ff-h);
-    font-size: 80px;
+    font-size: 100px;
     line-height: 100px;
+    padding-bottom: 4vh;
 }
 .bottom-text{
     padding-bottom: 4vh;
@@ -46,7 +47,7 @@
 .subtext{
     height: 20vh;
     z-index: -1;
-    padding-left: 40vw;
+    padding-left: 48vw;
     font-family: var(--ff-l);
     font-size: 150.5px;
     color: #ffe3e4;
