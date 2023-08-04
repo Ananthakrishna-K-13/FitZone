@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import Navbar from '../../components/Navbar/Navbar'
-import Detail from '../../components/Detail/Detail'
+import Navbar from '../components/Navbar/Navbar'
+import Detail from '../components/Detail/Detail'
 import { useParams } from 'react-router-dom'
 import { useEffect } from 'react';
-import { exerciseOptions, fetchData, youtubeOptions } from '../../fetchData';
-import SimilarMuscleExercises from '../../components/SimilarMuscleExercises/SimilarMuscleExercises';
-import SimilarBodyPartExercises from '../../components/SimilarBodyPartExercises/SimilarBodyPartExercises';
-import SimilarEquipmentExercises from '../../components/SimilarEquipmentExercises/SimilarEquipmentExercises';
-import VideoSuggestion from '../../components/VideoSuggestion/VideoSuggestion';
+import { exerciseOptions, fetchData, youtubeOptions } from '../fetchData';
+import SimilarMuscleExercises from '../components/SimilarMuscleExercises/SimilarMuscleExercises';
+import SimilarBodyPartExercises from '../components/SimilarBodyPartExercises/SimilarBodyPartExercises';
+import SimilarEquipmentExercises from '../components/SimilarEquipmentExercises/SimilarEquipmentExercises';
+import VideoSuggestion from '../components/VideoSuggestion/VideoSuggestion';
 import LoadingBar from 'react-top-loading-bar'
 
 export default function ExerciseDetail() {

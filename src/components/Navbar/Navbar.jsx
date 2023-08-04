@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <div className='nav-container'>
         <div className='logo'>
-            <h1><i style={{color:'black'}} className='bx bx-dumbbell'></i>HomeFit</h1>
+            <h1><i style={{color:'black'}} className='bx bx-dumbbell'></i>FitZone</h1>
         </div>
         <div className='routes'>
             <Link to='/' className='Link'>Home</Link>

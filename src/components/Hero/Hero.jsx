@@ -2,7 +2,6 @@ import './Hero.css';
 import React from 'react';
 import HeroImage from '../../assets/hero.png'
 import { Link } from 'react-router-dom';
-import 'animate.css'
 
 export default function Hero() {
   return (
@@ -20,7 +19,7 @@ export default function Hero() {
               </div>
         </div>    
     </div>
-    <div className='subtext animate__fadeIn animate__animated '>
+    <div className='subtext'>
     <span>#WORKOUT</span>
   </div>
   </>

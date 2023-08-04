@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import image from '../../assets/image.png'
 import { calculatorOptions, fetchData } from '../../fetchData';
 import spinner from '../../assets/spinner.gif'
-import 'animate.css'
+
 
 export default function IdealWeightCalculator() {
   const [gender, setGender] = useState('');
@@ -26,7 +26,7 @@ export default function IdealWeightCalculator() {
     <div>
         <Navbar/>
         <div className='bmi-cont'>
-          <div className='bmi-form animate__animated animate__fadeInLeft' id="bmi-frm">
+          <div className='bmi-form slide-left' id="bmi-frm">
               <div className='param'>
                 <p>Enter your gender: <br />('male' / 'female')</p>
                 <input type="text" value={gender} onChange={(evnt)=>setGender(evnt.target.value)}/>
@@ -46,7 +46,7 @@ export default function IdealWeightCalculator() {
                 <img src={spinner} alt="Loading..." />
               </div>
               <div className='bmi-img'>
-              <img className=' animate__animated animate__fadeInRight' src={image} alt="bmi" />
+              <img className='slide-right' src={image} alt="bmi" />
           </div>
         </div>
     </div>

@@ -86,3 +86,29 @@
     width: 10vw;
     height: 10vw;
 }
+.slide-right{
+    animation:slide-right 1s;
+}
+@keyframes slide-right{
+        from{
+            margin-left: 70%;
+            opacity: 0;
+        }
+        to{
+             margin-left: 0;
+             opacity: 100;
+        }
+}
+.slide-left{
+    animation: slide-left 1s;
+}
+@keyframes slide-left{
+    from{
+        margin-left: -50%;
+        opacity: 0;
+    }
+    to{
+        margin-left: 0;
+    opacity: 100;
+    }
+}

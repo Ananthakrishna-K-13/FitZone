@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from '../../components/Navbar/Navbar'
-import SearchBar from '../../components/SearchBar/SearchBar'
-import ExerciseList from '../../components/ExerciseList/ExerciseList'
+import Navbar from '../components/Navbar/Navbar'
+import SearchBar from '../components/SearchBar/SearchBar'
+import ExerciseList from '../components/ExerciseList/ExerciseList'
 import { useState } from 'react'
 import LoadingBar from 'react-top-loading-bar'
 
