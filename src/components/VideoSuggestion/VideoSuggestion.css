@@ -5,6 +5,7 @@
     align-items: center;
     justify-content:flex-start;
     padding-left: 7vw;
+    flex-wrap: wrap;
 }
 .VideoSuggestion-container h1{
     font-family: var(--ff-h);
@@ -16,4 +17,17 @@
 }
 .VideoSuggestion-container{
     padding-top: 5vh;
+}
+
+@media (min-width:200px) and (max-width:580px){
+    .VideoSuggestion-container h1{
+        font-size: 6vw;
+    }
+    .VideoSuggestion-container{
+        height: 335vw;
+    }
+    .video-container{
+        justify-content: center;
+        padding: 0;
+    }
 }

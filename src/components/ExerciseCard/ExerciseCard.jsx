@@ -9,7 +9,7 @@ export default function ExerciseCard({element}){
 }
   return (
     <Link to={`/exercise/${element.id}`} className='container-card'>
-        <img src={element.gifUrl} alt="url" />
+        <img src={element.gifUrl} alt="url" loading='lazy' />
         <h1>{element.name.toUpperCase()}</h1>
         <p>Body Part : {capfirst(element.bodyPart)}</p>
         <p>Target Muscle : {capfirst(element.target)}</p>

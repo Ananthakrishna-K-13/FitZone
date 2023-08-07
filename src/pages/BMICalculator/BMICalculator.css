@@ -115,3 +115,30 @@
     opacity: 100;
     }
 }
+
+@media (min-width:200px) and (max-width:580px){
+    .bmi-img{
+        display: none;
+    }
+    .bmi-form{
+        width: 100vw;
+        padding: 5vw;
+        padding-top: 10vw;
+    }
+    .param p{
+        font-size: 3.5vw;
+    }
+    .bmi-btn{
+        width: 50vw;
+    }
+    .result{
+        width: 100vw;
+        padding: 2vw;
+    }
+    .result h1{
+        font-size: 6vw;
+    }
+    .result span{
+        font-size: 9vw;
+    }
+}

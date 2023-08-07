@@ -3,16 +3,17 @@
     height: 30vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
     border-bottom-color:#ddd ;
     border-bottom-style:solid ;
     border-bottom-width: 1px;
     padding-bottom: 4vh;
+    gap: 2vw;
 }
-h1{
+.form h1{
     font-family: var(--ff-h);
-    font-size: 40px;
+    font-size: 2.5vw;
     text-align: center;
 }
 input{
@@ -53,4 +54,24 @@ button:hover{
 .search-div{
     display: flex;
 
+}
+
+@media (min-width:200px) and (max-width:580px){
+    .form{
+        height: 40vw;
+        padding-top: 4vw;
+    }
+    .form h1{
+        font-size: 5vw;
+    }
+    input{
+        width: 60vw;
+        height: 7vw;
+        font-size: 2.5vw;
+    }
+    button{
+        width: 20vw;
+        height: 7vw;
+        font-size: 3vw;
+    }
 }

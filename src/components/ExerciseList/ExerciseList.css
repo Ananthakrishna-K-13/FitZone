@@ -46,7 +46,19 @@ li:hover{
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    padding: 5vh;
+    padding: 3vh;
     justify-content: center;
 
+}
+
+@media (min-width:200px) and (max-width:580px){
+    .filterbar{
+        display: none;
+    }
+    .itemlist{
+        width: 100vw;
+    }
+    .itemlist h1{
+        font-size: 5vw;
+    }
 }

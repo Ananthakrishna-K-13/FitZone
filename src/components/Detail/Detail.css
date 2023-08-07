@@ -5,6 +5,7 @@
     padding: 1vh;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 
 }
 .detail-container img{
@@ -42,4 +43,28 @@
 .detail-text .instruct{
     width: 100%;
     text-align: left;
+}
+
+@media (min-width:200px) and (max-width:580px){
+    .detail-container{
+        height: auto;
+    }
+    .detail-container img{
+        width: 80vw;
+        height: auto;
+    }
+    .detail-text{
+        width: 100vw;
+        padding: 2vw;
+    }
+    .detail-text h1{
+        font-size: 8vw;
+        padding: 5vw;
+    }
+    .detail-text p{
+        font-size: 18px;
+    }
+    .detail-text span{
+        font-size: 22px;
+    }
 }

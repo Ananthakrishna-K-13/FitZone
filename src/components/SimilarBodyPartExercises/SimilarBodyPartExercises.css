@@ -17,3 +17,12 @@
     font-size: 3vh;
 }
 
+@media (min-width:200px) and (max-width:580px){
+    .similar-card-container{
+        justify-content: center;
+        padding: 0;
+    }
+    .similar-container .similar-heading{
+        font-size: 6vw;
+    }
+}

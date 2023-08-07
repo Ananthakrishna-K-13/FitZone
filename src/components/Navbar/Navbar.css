@@ -1,20 +1,22 @@
 .nav-container{
     width: 100vw;
-    height: 15vh;
+    height: 7vw;
     display: flex;
 }
 .logo{
     padding-left: 7vw;
     padding-top: 3.5vh;
     height: 100%;
-    width: 30% ;
-    font-family: var(--ff-l);
-    font-weight: 700;
-    font-size: 25px;
+    width: 30% ;   
     color: black;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+}
+.logo h1{
+    font-size: 3vw;
+    font-family: var(--ff-h);
+    font-weight: 700;
 }
 .dumbbel{
     width: 100%;
@@ -26,13 +28,13 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 6%;
-    padding-right: 20rem;
+    gap: 5%;
+    padding-right: 10vw;
 }
 .Link{
     text-decoration: none;
     font-family: var(--ff-h);
-    font-size: 20px;
+    font-size: 1.1vw;
     font-weight: 600;
     color: black;
     position: relative;
@@ -47,7 +49,7 @@
     transition: all 0.5s;
     transform-origin: 0;
 }
-.routes span::after{
+/* .routes span::after{
     content: '';
     display: block;
     height: 4px;
@@ -64,20 +66,24 @@
     cursor: pointer;
     display: block;
     position: relative;
+} */
+.routes span{
+    cursor: pointer;
 }
 .routes span:hover::after{
     transform: scaleX(1);
 }
 .dropdown-list{
     position: absolute;
-    top: 3vh;
+    top: 2vh;
     display: none;
     font-family: var(--ff-h);
     font-weight: 700;
-    font-size: 20px;
-    padding-top: 1.5vh;
-    width: 260px;
-    z-index: 2;
+    font-size: 1vw;
+    padding-top: 1vh;
+    padding-right: 0.5vw;
+    width: 290px;
+    z-index: 3;
 }
 .dropdown{
     position: relative;
@@ -87,13 +93,43 @@
         display: block;
 }
 .dropdown a{
-    display:inline-block;
+    display:block;
     padding-top: 1.25vh;
     transition: all 0.3s;
 }
 .dropdown a:hover{
-    font-size: 22px;
+    font-size: 23px;
 }
 .Link:hover::after{
     transform: scaleX(1);
+}
+
+@media (min-width:200px) and (max-width:580px){
+    .nav-container{
+        height: 15vw;
+    }
+    .dropdown:active .dropdown-list{
+        display: block;
+    }
+    .logo{
+        width: 40%;
+        padding-inline: 15px;
+        padding-top: 0;
+        align-items: center;
+    }
+    .logo h1{
+        font-size: 5vw;
+    }
+    .routes .Link{
+        font-size: 3vw;
+    }
+    .dropdown-list{
+        width: 130px;
+        background-color: white;
+        padding: 5px;
+        border-radius: 10px;
+        font-size: 15px;
+        left: -30px;
+    }
+
 }
