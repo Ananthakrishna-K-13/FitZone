@@ -4,7 +4,7 @@
 Fitzone offers an extensive array of exercises, each accompanied by informative GIF videos illustrating proper execution techniques. Furthermore, the website recommends pertinent YouTube videos to further enrich your understanding of these exercises. Beyond this, the site recommends alternative exercises that target similar muscles, body parts, and equipment. It also features a BMI calculator, allowing you to assess your body mass index and gain valuable insights into your health status. Additionally, you can determine your daily calorie requirements, equipping you with the knowledge to tailor your nutrition plan effectively. And to support your fitness goals even further, the site provides insight into the ideal weight range for your height, empowering you with essential benchmarks for your journey towards a healthier lifestyle.
 
 
-![homepage](homepage.png)
+![homepage](src/assets/homepage.png)
 
 ## Motivation:
 The inspiration behind creating such a website came from the need for a comprehensive one-stop platform that simplifies the understanding of all fancy named gym exercises like the "Assisted Parallel Close Grip Pull Up".This is extremely helpful to beginners seeking guidance without a trainer or anyone who wants to know about an exercise.
@@ -23,8 +23,8 @@ As I was new to React, I ran into numerous problems from wrong syntax to react r
 1. I wanted useEffect to fire every time the page is reloaded, that is act like componentDidMount, I realized that an empty dependency array does this. So I left the dependency blank (not empty array) as shown below. The first picture is how it should be done, the second picture is what I did.
 
 
-![problem](problem.png) 
-![problem](Problem1.png)
+![problem](src/assets/problem.png) 
+![problem](src/assets/problem1.png)
 
 
 But this acted like both componentDiDMount and componentDidUpdate and kept an firing useEffect and I had to empty my free usage limit of RapidApi from 2 accounts before realizing the difference and solving it. I found the solution for this on StackOverflow.
