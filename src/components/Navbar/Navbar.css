@@ -1,6 +1,6 @@
 .nav-container{
     width: 100vw;
-    height: 7vw;
+    height: max(7vw,100px);
     display: flex;
 }
 .logo{
@@ -34,7 +34,7 @@
 .Link{
     text-decoration: none;
     font-family: var(--ff-h);
-    font-size: 1.1vw;
+    font-size: max(1.1vw,20px);
     font-weight: 600;
     color: black;
     position: relative;
@@ -75,15 +75,17 @@
 }
 .dropdown-list{
     position: absolute;
-    top: 2vh;
+    top: 3vh;
+    margin-top: 1vh;
     display: none;
     font-family: var(--ff-h);
     font-weight: 700;
-    font-size: 1vw;
+    font-size: max(1vw,15px);
     padding-top: 1vh;
     padding-right: 0.5vw;
     width: 290px;
     z-index: 3;
+    background-color: white;
 }
 .dropdown{
     position: relative;
