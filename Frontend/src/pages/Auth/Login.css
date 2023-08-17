@@ -47,3 +47,36 @@
     font-weight: 700;
     text-decoration: underline;
 }
+.home-button{
+    position: absolute;
+    top: 10%;
+    left: 40vw;
+    color: #000;
+    font-family: var(--ff-p);
+}
+.login-text a i{
+    width: 25px;
+}
+.home-button:hover{
+    text-decoration: underline;
+}
+
+@media (max-width:900px){
+    .home-button{
+        left: 70%;
+    }
+    .login-container img{
+        display: none;
+    }
+    .login-text{
+        width: 100vw;
+    }
+    .login-text input{
+        width: 70vw;
+        height: 50px;
+    }
+    .login-text button{
+        width: 70vw;
+        height: 50px;
+    }
+}

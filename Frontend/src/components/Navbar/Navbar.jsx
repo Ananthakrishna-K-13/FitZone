@@ -52,6 +52,7 @@ export default function Navbar() {
                 </div>
               </li>
               <span onClick={handleLogout} id='logout' style={{display:"none"}} className='Link'>Logout</span>
+              {/* <Link id='profile' className='Link' to='/profile'>Profile&nbsp;<i class='bx bxs-user-account bx-sm'></i></Link> */}
               <Link id='login' className='Link' to='/login' >Login</Link>
         </ul>
     </div>

@@ -6,49 +6,50 @@ import { useState } from 'react'
 
 const Login = () => {
     let nav = useNavigate();
-    const handleShowClick=()=>{
+    const handleShowClick = () => {
         let ele = document.getElementById('password');
-        if(ele.type === 'text') ele.type = 'password';
+        if (ele.type === 'text') ele.type = 'password';
         else ele.type = 'text';
     }
-    const [credentials, setCredentials] = useState({name:"",password:""})
-    const onchange = (e)=>{
-        setCredentials({...credentials,[e.target.id]:e.target.value})
+    const [credentials, setCredentials] = useState({ name: "", password: "" })
+    const onchange = (e) => {
+        setCredentials({ ...credentials, [e.target.id]: e.target.value })
     }
-    const handleLoginClick= async()=>{
-        let res = await fetch("http://localhost:5000/api/auth/login",{
-            method:"POST",
-            headers:{
-                "content-type":"application/json"
+    const handleLoginClick = async () => {
+        let res = await fetch("http://localhost:5000/api/auth/login", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
             },
-            body:JSON.stringify({username:credentials.username,password:credentials.password})
-        }) 
-        res= await res.json();
-        if(res.success){
-            localStorage.setItem('token',res.authtoken);
+            body: JSON.stringify({ username: credentials.username, password: credentials.password })
+        })
+        res = await res.json();
+        if (res.success) {
+            localStorage.setItem('token', res.authtoken);
             nav('/');
         }
-        else{
+        else {
             alert("Invalid Credentials entered");
         }
     }
-  return (
-    <div className='login-container'>
-        <div className="login-text">
-            <h1>Log in to Continue</h1>
-            <label htmlFor="username">Username</label>
-            <input type="text" id="username" onChange={onchange}/>
-            <label htmlFor="password">Password</label>
-            <div className='password-cont'>
-                <input type="password"  id = "password" onChange={onchange}/>
-                <i onClick={handleShowClick} class='bx bxs-show bx-md'></i>
+    return (
+        <div className='login-container'>
+            <div className="login-text">
+                <Link className='home-button' to='/'>Go to Home<i class='bx bxs-right-arrow'></i></Link>
+                <h1>Log in to Continue</h1>
+                <label htmlFor="username">Username</label>
+                <input type="text" id="username" onChange={onchange} />
+                <label htmlFor="password">Password</label>
+                <div className='password-cont'>
+                    <input type="password" id="password" onChange={onchange} />
+                    <i onClick={handleShowClick} class='bx bxs-show bx-md'></i>
+                </div>
+                <button onClick={handleLoginClick}>Login</button>
+                <p>Dont have an account?&nbsp;&nbsp;<Link to='/signup'>Sign up</Link></p>
             </div>
-            <button onClick={handleLoginClick}>Login</button>
-            <p>Dont have an account?&nbsp;&nbsp;<Link to='/signup'>Sign up</Link></p>
+            <img src={loginImage} alt="" />
         </div>
-        <img src={loginImage} alt="" />
-    </div>
-  )
+    )
 }
 
 export default Login

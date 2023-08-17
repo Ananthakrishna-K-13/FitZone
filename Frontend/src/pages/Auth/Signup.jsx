@@ -47,6 +47,7 @@ const Signup = () => {
   return (
     <div className='login-container'>
         <div className="login-text">
+        <Link className='home-button' to='/'>Go to Home<i class='bx bxs-right-arrow'></i></Link>
             <h1>Create new account</h1>
             <label htmlFor="username">Username</label>
             <input type="text" id="username" onChange={onchange} />

@@ -44,6 +44,14 @@
     width: 100%;
     text-align: left;
 }
+.detail-buttons{
+    width: inherit;
+    padding-left:inherit ;
+    padding-top: 1vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
 
 @media (min-width:200px) and (max-width:580px){
     .detail-container{

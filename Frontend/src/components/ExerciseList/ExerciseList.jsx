@@ -3,30 +3,31 @@ import './ExerciseList.css'
 import { exerciseOptions, fetchData } from '../../fetchData'
 import ExerciseCard from '../ExerciseCard/ExerciseCard'
 import { useNavigate } from 'react-router-dom'
+import FavouriteCard from '../FavouriteCard/FavouriteCard'
 
 export default function ExerciseList({ bodyPart, setBodyPart, targetMuscle, setTargetMuscle, equipment, setEquipment, exercisesToDisplay, setExercisesToDisplay, setProgress }) {
     const [bodyParts, setBodyParts] = useState([])
     const [targetMuscles, setTargetMuscles] = useState([])
     const [equipments, setEquipments] = useState([])
     let nav = useNavigate();
-
-    useEffect(() => {
-        if(localStorage.getItem('token')){
-        const fetchFilterData = async () => {
-            setProgress(10);
-            let dataBodyParts = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
-            setProgress(40)
-            let dataTargetMuscles = await fetchData('https://exercisedb.p.rapidapi.com/exercises/targetList', exerciseOptions);
-            setProgress(70)
-            let dataEquipment = await fetchData('https://exercisedb.p.rapidapi.com/exercises/equipmentList', exerciseOptions);
-            setBodyParts([...dataBodyParts])
-            setTargetMuscles([...dataTargetMuscles])
-            setEquipments([...dataEquipment])
-            setProgress(100)
+    const [favs, setFavs] = useState(false)
+    /* useEffect(() => {
+        if (localStorage.getItem('token')) {
+            const fetchFilterData = async () => {
+                setProgress(10);
+                let dataBodyParts = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
+                setProgress(40)
+                let dataTargetMuscles = await fetchData('https://exercisedb.p.rapidapi.com/exercises/targetList', exerciseOptions);
+                setProgress(70)
+                let dataEquipment = await fetchData('https://exercisedb.p.rapidapi.com/exercises/equipmentList', exerciseOptions);
+                setBodyParts([...dataBodyParts])
+                setTargetMuscles([...dataTargetMuscles])
+                setEquipments([...dataEquipment])
+                setProgress(100)
+            }
+            fetchFilterData();
         }
-        fetchFilterData();
-        }
-        else{
+        else {
             nav('/login')
         }
     }, [])
@@ -46,8 +47,32 @@ export default function ExerciseList({ bodyPart, setBodyPart, targetMuscle, setT
         }
         fetchDataToShow();
         setProgress(100)
-    }, [bodyPart, targetMuscle, equipment])
-
+    }, [bodyPart, targetMuscle, equipment]) */
+    const handleCheck= async ()=>{
+        if(!favs){
+            setFavs(!favs);
+            setProgress(50)
+            let response =await  fetch("http://localhost:5000/api/favs/getallfavs",{
+                method:"GET",
+                headers:{
+                "Content-Type":"application/json",
+                "authtoken":localStorage.getItem('token')
+                }
+            })
+            response = await response.json();
+            setExercisesToDisplay(response)
+            setProgress(100)
+        }
+        else{
+            setExercisesToDisplay([])
+            setProgress(30)
+            setFavs(!favs);
+            let dataToShow = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+            setProgress(80)
+            setExercisesToDisplay(dataToShow);
+            setProgress(100)
+        }
+    }
     return (
         <div className='outer-container'>
             <div className='filterbar'>
@@ -96,14 +121,17 @@ export default function ExerciseList({ bodyPart, setBodyPart, targetMuscle, setT
                 </div>
             </div>
             <div className='itemlist'>
-                <h1>Results:</h1>
+                <div className='top-container-toggle'>
+                    <h1>Results:</h1>
+                    <div className='toggle-container'>
+                        <input type="checkbox" id="switch" />
+                        <label onClick={handleCheck} for="switch">Toggle</label>
+                        <p>Show Favourites only</p>
+                    </div>
+                </div>
                 <div className='card-container'>
                     {
-                        exercisesToDisplay.map((element) => {
-                            return (
-                                <ExerciseCard element={element} key={element.id} />
-                            )
-                        })
+                        favs?(exercisesToDisplay.length===0?<h1>Add Favourites to show here</h1>:exercisesToDisplay.map((element) => (<FavouriteCard element={element} key={element._id}/>))):exercisesToDisplay.map((element) => (<ExerciseCard element={element} key={element.id} />))
                     }
                 </div>
             </div>

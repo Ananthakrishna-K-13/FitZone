@@ -9,5 +9,6 @@ mongoose.connect("mongodb://0.0.0.0:27017").then(console.log('Connected to mongo
 app.use(cors())
 app.use(express.json())
 app.use('/api/auth',require('./routes/auth'))
+app.use('/api/favs',require('./routes/fav'))
 
 app.listen(5000,()=>console.log("app listening on http://localhost:5000"))
