@@ -1,0 +1,49 @@
+.login-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.login-container img{
+    width: 50vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.login-text{
+    height: 100vh;
+    width: 50vw;
+    font-family: var(--ff-h);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 7vw;
+}
+.login-text h1{
+    margin-bottom: 5vh;
+    font-size: 2.5rem;
+}
+.login-text input{
+    margin-bottom: 2.5vh;
+}
+.login-text input{
+    width: 33vw;
+}
+.login-text button{
+    width: 33vw;
+}
+.login-text i{
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+.login-text p{
+    font-family: var(--ff-p);
+    padding-top: 2vh;
+}
+.login-text p a{
+    font-weight: 700;
+    text-decoration: underline;
+}

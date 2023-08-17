@@ -1,0 +1,132 @@
+.nav-container{
+    width: 100vw;
+    height: max(7vw,100px);
+    display: flex;
+}
+.logo{
+    padding-left: 7vw;
+    padding-top: 3.5vh;
+    height: 100%;
+    width: 30% ;   
+    color: black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.logo h1{
+    font-size: 3vw;
+    font-family: var(--ff-h);
+    font-weight: 700;
+}
+.dumbbel{
+    width: 100%;
+}
+.routes{
+    height: 100%;
+    width: 70%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3%;
+    padding-right: 4vw;
+}
+.Link{
+    text-decoration: none;
+    font-family: var(--ff-h);
+    font-size: max(1.1vw,20px);
+    font-weight: 600;
+    color: black;
+    position: relative;
+    overflow: hidden;
+}
+.Link::after{
+    content: '';
+    display: block;
+    height: 4px;
+    background-color: red;
+    transform: scaleX(0);
+    transition: all 0.5s;
+    transform-origin: 0;
+}
+.routes li{
+    text-decoration: none;
+    list-style: none;
+}
+.routes span{
+    cursor: pointer;
+}
+.routes span:hover::after{
+    transform: scaleX(1);
+}
+.routes li a{
+    text-decoration: none;
+    border: none;
+}
+.dropdown-list{
+    position: absolute;
+    top: 2.15rem;
+    display: none;
+    font-family: var(--ff-h);
+    font-weight: 700;
+    font-size: max(1.1vw,16px);
+    padding-right: 0.5vw;
+    width: 290px;
+    z-index: 3;
+    background-color: white;
+    padding-top: 20px;
+}
+.dropdown{
+    position: relative;
+    transition: all 20s;
+}
+.dropdown a{
+    display:block;
+    padding-bottom: 1.25vh;
+    transition: all 0.3s;
+}
+
+.Link:hover::after{
+    transform: scaleX(1);
+}
+
+@media (min-width:580px){
+.dropdown:hover .dropdown-list{
+    display: block;
+}
+.dropdown a:hover{
+    font-size: max(1.2vw,18px);
+}
+}
+
+
+@media (min-width:200px) and (max-width:580px){
+    .nav-container{
+        height: 15vw;
+    }
+    .dropdown:active .dropdown-list{
+        display: block;
+    }
+    .logo{
+        width: 40%;
+        padding-inline: 15px;
+        padding-top: 0;
+        align-items: center;
+    }
+    .logo h1{
+        font-size: 5vw;
+    }
+    .routes .Link{
+        font-size: 3vw;
+    }
+    .dropdown-list{
+        top: 1.7rem;
+        width: 130px;
+        background-color: white;
+        padding: 1px;
+        padding-top: 5px;
+        border-radius: 10px;
+        font-size: 3vw;
+        left: -30px;
+    }
+}
