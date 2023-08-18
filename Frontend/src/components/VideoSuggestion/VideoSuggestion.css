@@ -1,6 +1,6 @@
 .video-container{
     width: 100vw;
-    height: 35vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content:flex-start;
@@ -19,12 +19,12 @@
     padding-top: 5vh;
 }
 
-@media (min-width:200px) and (max-width:580px){
+@media (min-width:200px) and (max-width:1100px){
     .VideoSuggestion-container h1{
         font-size: 6vw;
     }
     .VideoSuggestion-container{
-        height: 335vw;
+        height: auto;
     }
     .video-container{
         justify-content: center;

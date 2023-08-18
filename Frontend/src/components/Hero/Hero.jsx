@@ -15,7 +15,7 @@ export default function Hero() {
               <h1><TypeAnimation sequence={["Workout.",2000,"PowerUp.",2000,"Improve.",2000,"Progress.",2000]} speed={5} repeat={Infinity} /></h1>
               <p>By exploring highly effective exercises without the need for a trainer.</p>
               <div className='explore-button'>
-                <Link className='btn-txt' to='/exercises'>Explore Now   <i class='bx bx-right-arrow' ></i></Link>
+                <Link className='btn-txt' to='/exercises'>Explore Now   <i className='bx bx-right-arrow' ></i></Link>
               </div>
         </div>    
     </div>

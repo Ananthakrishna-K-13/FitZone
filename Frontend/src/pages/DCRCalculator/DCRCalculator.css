@@ -112,7 +112,7 @@
     opacity: 100;
     }
 }
-@media (min-width:200px) and (max-width:580px){
+@media (min-width:200px) and (max-width:1250px){
     .bmi-img{
         display: none;
     }

@@ -20,7 +20,7 @@
     height: 85vh;
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     padding-left: 7vw;
     padding-top: 9vh;
     position: absolute;
@@ -115,7 +115,7 @@
     opacity: 100;
     }
 }
-@media (min-width:200px) and (max-width:580px){
+@media (min-width:200px) and (max-width:1250px){
     .bmi-img{
         display: none;
     }

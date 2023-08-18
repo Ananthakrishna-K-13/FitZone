@@ -56,7 +56,7 @@ button:hover{
 
 }
 
-@media (min-width:200px) and (max-width:580px){
+@media (min-width:200px) and (max-width:700px){
     .form{
         height: 40vw;
         padding-top: 4vw;

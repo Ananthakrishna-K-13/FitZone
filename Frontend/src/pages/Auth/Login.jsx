@@ -3,6 +3,7 @@ import './Login.css'
 import loginImage from '../../assets/login.png'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+const baseUrl = "https://fitzone-backend-112.onrender.com/api" 
 
 const Login = () => {
     let nav = useNavigate();
@@ -16,7 +17,7 @@ const Login = () => {
         setCredentials({ ...credentials, [e.target.id]: e.target.value })
     }
     const handleLoginClick = async () => {
-        let res = await fetch("http://localhost:5000/api/auth/login", {
+        let res = await fetch(`${baseUrl}/auth/login`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -35,14 +36,14 @@ const Login = () => {
     return (
         <div className='login-container'>
             <div className="login-text">
-                <Link className='home-button' to='/'>Go to Home<i class='bx bxs-right-arrow'></i></Link>
+                <Link className='home-button' to='/'>Go to Home<i className='bx bxs-right-arrow'></i></Link>
                 <h1>Log in to Continue</h1>
                 <label htmlFor="username">Username</label>
                 <input type="text" id="username" onChange={onchange} />
                 <label htmlFor="password">Password</label>
                 <div className='password-cont'>
                     <input type="password" id="password" onChange={onchange} />
-                    <i onClick={handleShowClick} class='bx bxs-show bx-md'></i>
+                    <i onClick={handleShowClick} className='bx bxs-show bx-md'></i>
                 </div>
                 <button onClick={handleLoginClick}>Login</button>
                 <p>Dont have an account?&nbsp;&nbsp;<Link to='/signup'>Sign up</Link></p>

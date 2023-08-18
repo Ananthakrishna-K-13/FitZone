@@ -18,7 +18,7 @@ router.post('/signup', async (req, res) => {
         res.json({ success: true, authtoken })
     }
     catch (error) {
-        console,log(error)
+        console.log(error)
         res.status(500).json({ success: false, error: "Some internal error Occured" })
     }
 })

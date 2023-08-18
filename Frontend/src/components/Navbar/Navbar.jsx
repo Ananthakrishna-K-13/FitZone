@@ -44,7 +44,7 @@ export default function Navbar() {
                   <Link className='Link' to='/exercises' >Exercises</Link>
               </li>
               <li className='dropdown'>
-                  <span className='Link' onClick={handleclick}>Utilities<i class='bx bx-chevron-down'></i></span>
+                  <span className='Link' onClick={handleclick}>Utilities<i className='bx bx-chevron-down'></i></span>
                   <div id='dd' className="dropdown-list">
                   <Link to='/bmi'>BMI calculator</Link>
                   <Link to='/weight'>Ideal Weight</Link>
@@ -52,7 +52,7 @@ export default function Navbar() {
                 </div>
               </li>
               <span onClick={handleLogout} id='logout' style={{display:"none"}} className='Link'>Logout</span>
-              {/* <Link id='profile' className='Link' to='/profile'>Profile&nbsp;<i class='bx bxs-user-account bx-sm'></i></Link> */}
+              {/* <Link id='profile' className='Link' to='/profile'>Profile&nbsp;<i className='bx bxs-user-account bx-sm'></i></Link> */}
               <Link id='login' className='Link' to='/login' >Login</Link>
         </ul>
     </div>

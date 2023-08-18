@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar/Navbar'
 import Detail from '../components/Detail/Detail'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect } from 'react';
 import { exerciseOptions, fetchData, youtubeOptions } from '../fetchData';
 import SimilarMuscleExercises from '../components/SimilarMuscleExercises/SimilarMuscleExercises';
@@ -11,15 +11,15 @@ import VideoSuggestion from '../components/VideoSuggestion/VideoSuggestion';
 import LoadingBar from 'react-top-loading-bar'
 
 export default function ExerciseDetail() {
-  const [detailToDisplay, setDetailToDisplay] = useState({
+  const [detailToDisplay, setDetailToDisplay] = useState(/* {
     "bodyPart": "shoulders",
     "equipment": "smith machine",
     "gifUrl": "https://api.exercisedb.io/image/iJAwG6Fk5PYkPv",
     "id": "0765",
     "name": "smith seated shoulder press",
     "target": "delts"
-  }/* {} */)
-  const [similarMusclesData, setSimilarMusclesData] = useState( [
+  } */{})
+  const [similarMusclesData, setSimilarMusclesData] = useState(/*  [
     {
       "bodyPart": "waist",
       "equipment": "body weight",
@@ -60,8 +60,8 @@ export default function ExerciseDetail() {
       "name": "weighted front plank",
       "target": "abs"
     }
-  ]/* [] */ )
-  const [similarBodyPartData, setSimilarBodyPartData] = useState([ {
+  ] */[] )
+  const [similarBodyPartData, setSimilarBodyPartData] = useState(/* [ {
     "bodyPart": "waist",
     "equipment": "body weight",
     "gifUrl": "https://api.exercisedb.io/image/HjOliWF24iSTZi",
@@ -100,8 +100,8 @@ export default function ExerciseDetail() {
     "id": "2135",
     "name": "weighted front plank",
     "target": "abs"
-  }]/* [] */)
-  const [similarEquipmentData, setSimilarEquipmentData] = useState( [{
+  }] */[])
+  const [similarEquipmentData, setSimilarEquipmentData] = useState( /* [{
     "bodyPart": "waist",
     "equipment": "body weight",
     "gifUrl": "https://api.exercisedb.io/image/HjOliWF24iSTZi",
@@ -140,8 +140,8 @@ export default function ExerciseDetail() {
     "id": "2135",
     "name": "weighted front plank",
     "target": "abs"
-  }]/* [] */)
-  const [exerciseVideos, setExerciseVideos] = useState( {
+  }] */[])
+  const [exerciseVideos, setExerciseVideos] = useState(/*  {
     "contents": [
       {
         "video": {
@@ -261,12 +261,17 @@ export default function ExerciseDetail() {
     ],
     "estimatedResults": "39288565",
     "next": "EpYDEgNhYnMajgNTQlNDQVF0VVR6RnJWamsxTjFwa1JZSUJDMU14UjFaeVdVaEVNR1J2Z2dFTGNESjZWREpJUVZKdWRHdUNBUXRQU0ZOWk5FbzRkMTl3VllJQkN6SndURlF0YjJ4blZVcHpnZ0VMYUhocVMxcGpUMVF4TjBXQ0FRdFBaazFMTVhJME1VcDZNSUlCQzBWbVNqUmhRbDlsYmxaRmdnRUxXR2RKWDNBNFlrdG5OemlDQVF0V2VHaE9ibTVZWW5CR1NZSUJDMlZGU2twbFZFUm9XWEZGZ2dFTE56YzVha2swVW5kc05XT0NBUXQ1VmxGR1gxWnlYMWhEUllJQkMwcE9ZVVIxZVZSS1lWVlZnZ0VMTXpGUE56QmphM1paTTJPQ0FRdEZVRmhpVjBWR1VUQXdPSUlCQ3prMlgzcFJaM2hpUTBwcmdnRUxUWEpXTkhaRGIzUnBiekNDQVF0TlVscG1aVVl5ZVZKc1VZSUJDMk5pUTNRMk9WaEJWVXRCc2dFR0NnUUlHQkFDNmdFQ0NBSSUzRBiB4OgYIgtzZWFyY2gtZmVlZA%3D%3D"
-  } /* {"contents":[]} */)
+  }  */{"contents":[]})
   const [progress, setProgress] = useState(0)
+  const nav = useNavigate()
 
   const {exerciseId} = useParams();
-   /* useEffect(() => {
+   useEffect(() => {
     const fetchDetailData = async ()=>{
+      if(!localStorage.getItem('token')){
+        nav('/login')
+        return
+      }
       console.log(exerciseId)
       setProgress(10);
       let exerciseDetailData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/exercise/${exerciseId}`, exerciseOptions);
@@ -285,7 +290,8 @@ export default function ExerciseDetail() {
       setSimilarEquipmentData(EquipmentData);
     }
     fetchDetailData();
-  }, [exerciseId])  */
+    // eslint-disable-next-line
+  }, [exerciseId]) 
   /* Commented to save API free use */
   
   return (

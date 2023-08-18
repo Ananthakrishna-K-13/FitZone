@@ -4,6 +4,8 @@ import { exerciseOptions, fetchData } from '../../fetchData'
 import ExerciseCard from '../ExerciseCard/ExerciseCard'
 import { useNavigate } from 'react-router-dom'
 import FavouriteCard from '../FavouriteCard/FavouriteCard'
+import spinner from '../../assets/spinner.gif'
+const baseUrl = "https://fitzone-backend-112.onrender.com/api" 
 
 export default function ExerciseList({ bodyPart, setBodyPart, targetMuscle, setTargetMuscle, equipment, setEquipment, exercisesToDisplay, setExercisesToDisplay, setProgress }) {
     const [bodyParts, setBodyParts] = useState([])
@@ -11,7 +13,7 @@ export default function ExerciseList({ bodyPart, setBodyPart, targetMuscle, setT
     const [equipments, setEquipments] = useState([])
     let nav = useNavigate();
     const [favs, setFavs] = useState(false)
-    /* useEffect(() => {
+    useEffect(() => {
         if (localStorage.getItem('token')) {
             const fetchFilterData = async () => {
                 setProgress(10);
@@ -30,6 +32,7 @@ export default function ExerciseList({ bodyPart, setBodyPart, targetMuscle, setT
         else {
             nav('/login')
         }
+        // eslint-disable-next-line
     }, [])
     useEffect(() => {
         setExercisesToDisplay([])
@@ -47,12 +50,13 @@ export default function ExerciseList({ bodyPart, setBodyPart, targetMuscle, setT
         }
         fetchDataToShow();
         setProgress(100)
-    }, [bodyPart, targetMuscle, equipment]) */
+        // eslint-disable-next-line
+    }, [bodyPart, targetMuscle, equipment])
     const handleCheck= async ()=>{
         if(!favs){
             setFavs(!favs);
             setProgress(50)
-            let response =await  fetch("http://localhost:5000/api/favs/getallfavs",{
+            let response =await  fetch(`${baseUrl}/favs/getallfavs`,{
                 method:"GET",
                 headers:{
                 "Content-Type":"application/json",
@@ -131,7 +135,7 @@ export default function ExerciseList({ bodyPart, setBodyPart, targetMuscle, setT
                 </div>
                 <div className='card-container'>
                     {
-                        favs?(exercisesToDisplay.length===0?<h1>Add Favourites to show here</h1>:exercisesToDisplay.map((element) => (<FavouriteCard element={element} key={element._id}/>))):exercisesToDisplay.map((element) => (<ExerciseCard element={element} key={element.id} />))
+                        favs?(exercisesToDisplay.length===0?<h1>Add Favourites to show here</h1>:exercisesToDisplay.map((element) => (<FavouriteCard element={element} key={element._id}/>))):(exercisesToDisplay.length===0?<img src={spinner} alt="" />:exercisesToDisplay.map((element) => (<ExerciseCard element={element} key={element.id} />)))
                     }
                 </div>
             </div>

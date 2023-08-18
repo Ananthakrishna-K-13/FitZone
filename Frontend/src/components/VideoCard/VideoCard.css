@@ -1,5 +1,5 @@
 .vcard-cont{
-    width: 20vw;
+    width: max(20vw,250px);
     height: 35vh;
     display: flex;
     flex-direction: column;

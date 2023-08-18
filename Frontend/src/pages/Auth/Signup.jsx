@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import loginImage from '../../assets/login.png'
 import './Login.css'
 import { useState } from 'react'
+const baseUrl = "https://fitzone-backend-112.onrender.com/api" 
 
 const Signup = () => {
     let nav=useNavigate()
@@ -25,7 +26,7 @@ const Signup = () => {
             alert("Password doesnt match")
             return
         }
-        let response = await fetch("http://localhost:5000/api/auth/signup",{
+        let response = await fetch(`${baseUrl}/auth/signup`,{
             method:"POST",
             headers:{
                 "content-type":"application/json",
@@ -47,19 +48,19 @@ const Signup = () => {
   return (
     <div className='login-container'>
         <div className="login-text">
-        <Link className='home-button' to='/'>Go to Home<i class='bx bxs-right-arrow'></i></Link>
+        <Link className='home-button' to='/'>Go to Home<i className='bx bxs-right-arrow'></i></Link>
             <h1>Create new account</h1>
             <label htmlFor="username">Username</label>
             <input type="text" id="username" onChange={onchange} />
             <label htmlFor="password">Password</label>
             <div className='password-cont'>
                 <input type="password"  id = "password" onChange={onchange}/>
-                <i onClick={handleShowClick} class='bx bxs-show bx-md'></i>
+                <i onClick={handleShowClick} className='bx bxs-show bx-md'></i>
             </div>
             <label htmlFor="password">Confirm Password</label>
             <div className='password-cont'>
                 <input type="password"  id = "confirmpassword" onChange={onchange}/>
-                <i onClick={handleShowClickconfirm} class='bx bxs-show bx-md'></i>
+                <i onClick={handleShowClickconfirm} className='bx bxs-show bx-md'></i>
             </div>
             <button onClick={handleSignUpClick}>Sign Up</button>
             <p>Already have an account?&nbsp;&nbsp;<Link to='/login'>Login</Link></p>

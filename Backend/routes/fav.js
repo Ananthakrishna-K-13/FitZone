@@ -15,10 +15,10 @@ router.get('/getallfavs', getuser ,async (req,res)=>{
     }
 })
 
-router.post('/isfav',getuser,async(req,res)=>{
+router.get('/isfav',getuser,async(req,res)=>{
     try{
-        let exercise = await Fav.findOne({user:req.user, exercise:req.body.exercise})
-        if(!exercise) return res.status(200).json({isfav:false})
+        let exercise = await Fav.findOne({user:req.user, exercise:req.header('exercise')})
+        if(!exercise)  res.status(200).json({isfav:false})
         else res.status(200).json({isfav:true})
     }
     catch(error){
