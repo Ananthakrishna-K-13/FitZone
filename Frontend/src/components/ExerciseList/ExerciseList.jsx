@@ -5,7 +5,7 @@ import ExerciseCard from '../ExerciseCard/ExerciseCard'
 import { useNavigate } from 'react-router-dom'
 import FavouriteCard from '../FavouriteCard/FavouriteCard'
 import spinner from '../../assets/spinner.gif'
-const baseUrl = "https://fitzone-backend-112.onrender.com/api" 
+const baseUrl = "http://localhost:5000/api" 
 
 export default function ExerciseList({ bodyPart, setBodyPart, targetMuscle, setTargetMuscle, equipment, setEquipment, exercisesToDisplay, setExercisesToDisplay, setProgress }) {
     const [bodyParts, setBodyParts] = useState([])

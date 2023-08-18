@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './Detail.css'
-const baseUrl = "https://fitzone-backend-112.onrender.com/api" 
+const baseUrl = "http://localhost:5000/api" 
 
 export default function Detail({ detailToDisplay }) {
   useEffect(()=> {

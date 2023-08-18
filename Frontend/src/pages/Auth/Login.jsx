@@ -3,7 +3,7 @@ import './Login.css'
 import loginImage from '../../assets/login.png'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-const baseUrl = "https://fitzone-backend-112.onrender.com/api" 
+const baseUrl = "http://localhost:5000/api" 
 
 const Login = () => {
     let nav = useNavigate();
