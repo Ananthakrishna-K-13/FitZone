@@ -14,10 +14,10 @@ export default function Exercises() {
 
   return (
     <div>
-        <Navbar/>
-        <LoadingBar color='#f11946' height={6} progress={progress}/>
-        <SearchBar setExercisesToDisplay={setExercisesToDisplay} />
-        <ExerciseList bodyPart={bodyPart} setBodyPart={setBodyPart} targetMuscle={targetMuscle} setTargetMuscle={setTargetMuscle} equipment={equipment} setEquipment={setEquipment} exercisesToDisplay={exercisesToDisplay} setExercisesToDisplay={setExercisesToDisplay} setProgress={setProgress} />
+      <Navbar />
+      <LoadingBar color='#f11946' height={6} progress={progress} />
+      <SearchBar setExercisesToDisplay={setExercisesToDisplay} />
+      <ExerciseList bodyPart={bodyPart} setBodyPart={setBodyPart} targetMuscle={targetMuscle} setTargetMuscle={setTargetMuscle} equipment={equipment} setEquipment={setEquipment} exercisesToDisplay={exercisesToDisplay} setExercisesToDisplay={setExercisesToDisplay} setProgress={setProgress} />
     </div>
   )
 }

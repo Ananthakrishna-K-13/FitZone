@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import './ExerciseList.css'
-import { exerciseOptions, fetchData } from '../../fetchData'
+import { exerciseOptions, fetchData } from '../../utils/fetchData'
 import ExerciseCard from '../ExerciseCard/ExerciseCard'
 import { useNavigate } from 'react-router-dom'
 import FavouriteCard from '../FavouriteCard/FavouriteCard'
 import spinner from '../../assets/spinner.gif'
-const baseUrl = "http://localhost:5000/api" 
+const baseUrl = "http://localhost:5000/api"
 
 export default function ExerciseList({ bodyPart, setBodyPart, targetMuscle, setTargetMuscle, equipment, setEquipment, exercisesToDisplay, setExercisesToDisplay, setProgress }) {
     const [bodyParts, setBodyParts] = useState([])
@@ -52,22 +52,22 @@ export default function ExerciseList({ bodyPart, setBodyPart, targetMuscle, setT
         setProgress(100)
         // eslint-disable-next-line
     }, [bodyPart, targetMuscle, equipment])
-    const handleCheck= async ()=>{
-        if(!favs){
+    const handleCheck = async () => {
+        if (!favs) {
             setFavs(!favs);
             setProgress(50)
-            let response =await  fetch(`${baseUrl}/favs/getallfavs`,{
-                method:"GET",
-                headers:{
-                "Content-Type":"application/json",
-                "authtoken":localStorage.getItem('token')
+            let response = await fetch(`${baseUrl}/favs/getallfavs`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "authtoken": localStorage.getItem('token')
                 }
             })
             response = await response.json();
             setExercisesToDisplay(response)
             setProgress(100)
         }
-        else{
+        else {
             setExercisesToDisplay([])
             setProgress(30)
             setFavs(!favs);
@@ -129,13 +129,13 @@ export default function ExerciseList({ bodyPart, setBodyPart, targetMuscle, setT
                     <h1>Results:</h1>
                     <div className='toggle-container'>
                         <input type="checkbox" id="switch" />
-                        <label onClick={handleCheck} for="switch">Toggle</label>
+                        <label onClick={handleCheck} htmlFor="switch">Toggle</label>
                         <p>Show Favourites only</p>
                     </div>
                 </div>
                 <div className='card-container'>
                     {
-                        favs?(exercisesToDisplay.length===0?<h1>Add Favourites to show here</h1>:exercisesToDisplay.map((element) => (<FavouriteCard element={element} key={element._id}/>))):(exercisesToDisplay.length===0?<img src={spinner} alt="" />:exercisesToDisplay.map((element) => (<ExerciseCard element={element} key={element.id} />)))
+                        favs ? (exercisesToDisplay.length === 0 ? <h1>Add Favourites to show here</h1> : exercisesToDisplay.map((element) => (<FavouriteCard element={element} key={element._id || element.id} />))) : (exercisesToDisplay.length === 0 ? <img src={spinner} alt="" /> : exercisesToDisplay.map((element) => (<ExerciseCard element={element} key={element.id} />)))
                     }
                 </div>
             </div>

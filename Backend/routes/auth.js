@@ -2,7 +2,10 @@ const express = require('express')
 const router = express.Router();
 const User = require('../models/User')
 const jwt = require('jsonwebtoken')
-const SIGN = "FitZone"
+const dotenv = require('dotenv')
+dotenv.config();
+const SIGN = process.env.JWT_SIGN
+
 
 //Signup route
 router.post('/signup', async (req, res) => {

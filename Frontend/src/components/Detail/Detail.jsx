@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import './Detail.css'
-const baseUrl = "http://localhost:5000/api" 
+const baseUrl = "http://localhost:5000/api"
 
 export default function Detail({ detailToDisplay }) {
-  useEffect(()=> {
+  useEffect(() => {
     const buttonshow = async () => {
       let addbtn = document.getElementById('addbtn')
       let removebtn = document.getElementById('removebtn')
@@ -32,9 +32,9 @@ export default function Detail({ detailToDisplay }) {
     string = string?.charAt(0).toUpperCase() + string?.slice(1);
     return string
   }
-  let bodypart = capfirst(detailToDisplay.bodyPart)
-  let targetmuscle = capfirst(detailToDisplay.target)
-  let equip = capfirst(detailToDisplay.equipment)
+  let bodypart = capfirst(detailToDisplay.bodyPart).toString()
+  let targetmuscle = capfirst(detailToDisplay.target).toString()
+  let equip = capfirst(detailToDisplay.equipment).toString()
 
   const handleAddClick = async () => {
     let addbtn = document.getElementById('addbtn')
@@ -82,7 +82,7 @@ export default function Detail({ detailToDisplay }) {
     <div className='detail-container'>
       <img src={detailToDisplay.gifUrl} alt="url" />
       <div className='detail-text'>
-        <h1>{capfirst(detailToDisplay.name)}</h1>
+        <h1>{capfirst(detailToDisplay.name).toString()}</h1>
         <p>This exercise targets the <span>{bodypart}</span>. It enhances the <span>{targetmuscle}</span>, and utilizes <span>{equip}</span> for optimal effectiveness.</p>
         <p className='instruct'>Scroll below for similar exercises and more information.</p>
         <div className='detail-buttons'>

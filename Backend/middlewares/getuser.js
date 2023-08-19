@@ -1,6 +1,11 @@
 const jwt = require('jsonwebtoken')
-const SIGN = "FitZone"
+const dotenv = require('dotenv')
+dotenv.config();
+const SIGN = process.env.JWT_SIGN
 
+
+
+//Middleware to verify authtoken and get user from it 
 const getuser=(req,res,next)=>{
     let webtoken = req.header('authtoken');
     if(!webtoken){

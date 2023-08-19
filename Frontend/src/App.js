@@ -2,7 +2,7 @@ import { Route,BrowserRouter as Router, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Exercises from './pages/Exercises';
 import ExerciseDetail from './pages/ExerciseDetail';
-import ScrollToTop from './ScrollToTop';
+import ScrollToTop from './utils/ScrollToTop';
 import BMICalcultor from './pages/BMICalculator/BMICalcultor';
 import IdealWeightCalculator from './pages/IdealWeightCalculator/IdealWeightCalculator';
 import DCRCalculator from './pages/DCRCalculator/DCRCalculator';

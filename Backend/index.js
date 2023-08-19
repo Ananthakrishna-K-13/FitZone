@@ -7,10 +7,11 @@ dotenv.config();
 const PORT = process.env.PORT || 5000;
 
 const app = express();
+
 app.use(cors())
 app.options('*',cors())
-mongoose.connect(process.env.MONGO_URI).then(console.log('Connected to mongoDB'));
 
+mongoose.connect(process.env.MONGO_URI).then(console.log('Connected to mongoDB'));
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
