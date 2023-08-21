@@ -1,6 +1,8 @@
 # FitZone
 Unleash your fitness potential through our comprehensive website, offering exercise tutorials with GIFs, personalized YouTube suggestions, and essential health calculators for BMI, daily calories, and ideal weight guidance. It also has feautures for users to add certain exercises to favourites and check them later. Login/SignUp is necassary to use this app and is very simple.
 
+Frontend is built using React and CSS. Backend is a REST based API built using node, express, and MongoDB atlas.
+
 
 ## Environment Variables
 To run this project create a .env file in the Frontend and Backend directory each and add the following environment variables.<br />
@@ -21,7 +23,7 @@ You can contact me for my .env files or create your own. To create your own, res
 
 2. Create a [MongoDB Atlas](https://www.mongodb.com/atlas/database) account for free and get a URI to your database and use it int the .env file.
   
-3. JWT_SIGN can be any string.
+3. `JWT_SIGN` can be any string.
 
 
 ## Run Locally
