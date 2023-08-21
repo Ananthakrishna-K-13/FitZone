@@ -135,7 +135,7 @@ export default function ExerciseList({ bodyPart, setBodyPart, targetMuscle, setT
                 </div>
                 <div className='card-container'>
                     {
-                        favs ? (exercisesToDisplay.length === 0 ? <h1>Add Favourites to show here</h1> : exercisesToDisplay.map((element) => (<FavouriteCard element={element} key={element._id || element.id} />))) : (exercisesToDisplay.length === 0 ? <img src={spinner} alt="" /> : exercisesToDisplay.map((element) => (<ExerciseCard element={element} key={element.id} />)))
+                        favs ? (exercisesToDisplay.length === 0 ? <h1>Add Favourites to show here</h1> : exercisesToDisplay?.map((element) => (<FavouriteCard element={element} key={element._id || element.id} />))) : (exercisesToDisplay.length === 0 ? <img src={spinner} alt="" /> : exercisesToDisplay?.map((element) => (<ExerciseCard element={element} key={element.id} />)))
                     }
                 </div>
             </div>
