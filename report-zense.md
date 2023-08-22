@@ -40,6 +40,8 @@ But this acted like both componentDidMount and componentDidUpdate and kept on fi
 
 5. When I attempted to host backend on render and frontend on netlify, everything worked fine except that out of the 6 API endpoints, 3 of them gave cors error "allow-access-origin not specified" even after specifying "*" for allow-access-origin. I did not find the reason nor solution for this problem, hence I had to drop the idea of hosting the website.  
 
+6. I made a major mistake in css units. With the plan of making fluid website in the name of responsiveness, I have given font sizes in vw/vh which I realized is a mistake as it disables browser zoom. As I discovered the bug a little late, I plan to correct it after the evaluation.
+
 ## Future scope
 
 * I plan to make dedicated workout routine for every muscle/bodyPart which enables users to choose their workout routine based on time available and target muscle which will track their workout over time and suggest harder exercises.

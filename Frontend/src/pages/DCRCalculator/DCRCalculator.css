@@ -70,10 +70,10 @@
     gap: 3vh;
 }
 .result-cal h1{
-    font-size: 3vh;
+    font-size: 35px;
 }
 .result-cal span{
-    font-size: 5vh;
+    font-size: 53px;
 }
 .spinner-bmi{
     display: none;
@@ -132,9 +132,9 @@
         padding: 2vw;
     }
     .result-cal h1{
-        font-size: 6vw;
+        font-size: 30px;
     }
     .result-cal span{
-        font-size: 9vw;
+        font-size: 45px;
     }
 }

@@ -71,12 +71,13 @@
     width: 50vw;
     height: 85vh;
     gap: 3vh;
+    font-family: var(--ff-h);
 }
 .result h1{
-    font-size: 4vh;
+    font-size: 35px;
 }
 .result span{
-    font-size: 6vh;
+    font-size: 53px;
 }
 .spinner-bmi{
     display: none;
@@ -133,11 +134,12 @@
     .result{
         width: 100vw;
         padding: 2vw;
+        text-align: center;
     }
     .result h1{
-        font-size: 6vw;
+        font-size: 30px;
     }
     .result span{
-        font-size: 9vw;
+        font-size: 45px;
     }
 }
