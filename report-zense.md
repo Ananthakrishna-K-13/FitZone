@@ -1,7 +1,7 @@
 # FitZone-Your fitness Partner
 
 ## Overview:
-Fitzone offers an extensive array of exercises, each accompanied by informative GIF videos illustrating proper execution techniques. Furthermore, the website recommends pertinent YouTube videos to further enrich your understanding of these exercises. Beyond this, the site recommends alternative exercises that target similar muscles, body parts, and equipment. It also features a BMI calculator, allowing you to assess your body mass index and gain valuable insights into your health status. Additionally, you can determine your daily calorie requirements, equipping you with the knowledge to tailor your nutrition plan effectively. And to support your fitness goals even further, the site provides insight into the ideal weight range for your height, empowering you with essential benchmarks for your journey towards a healthier lifestyle. You can also specific exercises to favourties to access them later.
+Fitzone offers an extensive array of exercises, each accompanied by informative GIF videos illustrating proper execution techniques. Furthermore, the website recommends pertinent YouTube videos to further enrich your understanding of these exercises. Beyond this, the site recommends alternative exercises that target similar muscles, body parts, and equipment. It also features a BMI calculator, allowing you to assess your body mass index and gain valuable insights into your health status. Additionally, you can determine your daily calorie requirements, equipping you with the knowledge to tailor your nutrition plan effectively. And to support your fitness goals even further, the site provides insight into the ideal weight range for your height, empowering you with essential benchmarks for your journey towards a healthier lifestyle. You can also add specific exercises to favourties to access them later.
 
 
 ![homepage](Frontend/src/assets/homepage.png)
@@ -15,8 +15,21 @@ My personal experience at our college made me realise this problem. There was a 
 Frontend is built using React and CSS. Backend is a REST based API built using node, express, and MongoDB atlas. Overall I used the entire MERN Stack even though I didnt know anything when I started the project. <br/>
 I had very little to no knowledge about web-devolpment and how websites worked. I started by learning HTML and CSS from [FreeCodeCamp.org](https://www.youtube.com/c/Freecodecamp). I then learnt JavaScript and built a very basic static website using HTML, CSS and JS while following along with tutorials by [CodeWithHarry](https://www.youtube.com/@CodeWithHarry). I then learnt React, how to use react hooks, React router, and finsihed the basic UI structure of the site. The react documentation is very well written. I then watched [Traversy media](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA) on how to use APIs and use fetchAPI call from JS, await, async and integrated them. I also used some React libraries like 'react-top-loading-bar', 'react-type-animation'. I then came to know about responsive websites and made my website mobile friendly. I have styled everything including animations(except the typing animation, which I tried and realized theres a react library for it) in plain CSS, without using any framework. I then felt the need for a backend so that users can add specific exercises to favourites and access them later. I learned node and building apis using express from [Traversy media](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA). I used MongoDB atlas to store user info and favourites. I learnt about Json web token to store login state and implemented that.
 
+## Technologies/libraries used
+* React
+* MongoDB
+* Express
+* NodeJS
+* mongooose
+* JSON web token
+* Rapid API
+* react-type-animation
+* react-toastify
+* react-router-dom
+* react-top-loading-bar
+
 ## Experience:
-I enjoyed building this site very much as this was my first completely self built website from scratch. At times I got frustrated due to the problems I ran into, mainly the free API usage limit, I had to create 5 extra google accounts to avail free API usage, but overall it was a great experience. This project has increased my interest in WebDev and devolopment in general. I further plan to learn bootstrap as it makes styling and responsiveness very easy, as I feel confident in frontend, I plan to build a backend heavy project using bootstrap and MERN stack to get to know node/express better something like a social media app, and also explore GameDev. 
+I enjoyed building this site very much as this was my first completely self built website from scratch. At times I got frustrated due to the problems I ran into, mainly the free API usage limit, I had to create 5 extra google accounts to avail free API usage, but overall it was a great experience. This project has increased my interest in WebDev and devolopment in general. I further plan to learn bootstrap as it makes styling and responsiveness very easy. I also want to explore GameDev and DevOps. 
 
 ## Problems faced and how I solved them:
 As I was new to React/Node, I ran into numerous problems from wrong syntax to react router not scrolling the page to top, most of which were solved with the help of StackOverFlow and some other sites. Some of them are listed below.
@@ -44,7 +57,8 @@ But this acted like both componentDidMount and componentDidUpdate and kept on fi
 
 ## Future scope
 
+* As I ran into problems while hosting the website, I should host it and also make it optimized for search engines (Search engine optimiziation SEO) .
 * I plan to make dedicated workout routine for every muscle/bodyPart which enables users to choose their workout routine based on time available and target muscle which will track their workout over time and suggest harder exercises.
 * I also plan to gamify it by adding points per exercise completed, which will be measured based on time spent on a particular exercise, daily challenges, competition, leaderboards etc.
-* I also want to figure out a away to make it available offine, where users can download exercises.
+* I also want to figure out a way to make the website available offine, where users can download exercises.
 

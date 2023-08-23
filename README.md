@@ -3,6 +3,8 @@ Unleash your fitness potential through our comprehensive website, offering exerc
 
 Frontend is built using React and CSS. Backend is a REST based API built using node, express, and MongoDB atlas.
 
+Checkout [report](./report-zense.md) for more details
+
 
 ## Environment Variables
 To run this project create a .env file in the Frontend and Backend directory each and add the following environment variables.<br />
@@ -23,7 +25,7 @@ You can contact me for my .env files or create your own. To create your own, res
 
 2. Create a [MongoDB Atlas](https://www.mongodb.com/atlas/database) account for free and get a URI to your database and use it int the .env file.
   
-3. `JWT_SIGN` can be any string.
+3. `JWT_SIGN` can be any secret string.
 
 
 ## Run Locally

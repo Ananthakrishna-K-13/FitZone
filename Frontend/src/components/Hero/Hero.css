@@ -36,6 +36,7 @@
     font-size: 100px;
     line-height: 100px;
     padding-bottom: 4vh;
+    font-weight: 400;
 }
 .text p{
     font-family: var(--ff-p);

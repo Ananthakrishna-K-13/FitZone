@@ -1,9 +1,12 @@
 import React from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Link, useNavigate } from 'react-router-dom'
 import loginImage from '../../assets/login.png'
 import './Login.css'
 import { useState } from 'react'
-const baseUrl = "http://localhost:5000/api"
+const baseUrl = "http://localhost:5000/api";
+
 
 const Signup = () => {
     let nav = useNavigate()
@@ -23,7 +26,7 @@ const Signup = () => {
     }
     const handleSignUpClick = async () => {
         if (credentials.password !== credentials.confirmpassword) {
-            alert("Password doesnt match")
+            toast.error("Passwords dont match")
             return
         }
         let response = await fetch(`${baseUrl}/auth/signup`, {
@@ -42,7 +45,7 @@ const Signup = () => {
             nav('/');
         }
         else {
-            return alert("Username already exists. Provide a different username.")
+            return toast.warning("Username already exists. Provide a different username.")
         }
     }
     return (
@@ -66,6 +69,18 @@ const Signup = () => {
                 <p>Already have an account?&nbsp;&nbsp;<Link to='/login'>Login</Link></p>
             </div>
             <img src={loginImage} alt="" />
+            <ToastContainer
+                position="bottom-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
         </div>
     )
 }

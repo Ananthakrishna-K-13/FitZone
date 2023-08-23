@@ -3,6 +3,8 @@ import './Login.css'
 import loginImage from '../../assets/login.png'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const baseUrl = "http://localhost:5000/api"
 
 const Login = () => {
@@ -30,7 +32,7 @@ const Login = () => {
             nav('/');
         }
         else {
-            alert("Invalid Credentials entered");
+            toast.error("Invalid Credentials entered");
         }
     }
     return (
@@ -49,6 +51,18 @@ const Login = () => {
                 <p>Dont have an account?&nbsp;&nbsp;<Link to='/signup'>Sign up</Link></p>
             </div>
             <img src={loginImage} alt="" />
+            <ToastContainer
+                position="bottom-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
         </div>
     )
 }

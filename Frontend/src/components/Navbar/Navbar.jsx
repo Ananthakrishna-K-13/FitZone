@@ -15,7 +15,6 @@ export default function Navbar() {
   const handleLogout = () => {
     localStorage.removeItem('token')
     nav('/login')
-    alert("Logged out Succesfully")
   }
   useEffect(() => {
     let login = document.getElementById("login");
