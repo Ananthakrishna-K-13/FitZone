@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 import './Detail.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const baseUrl = "http://localhost:5000/api"
 
 export default function Detail({ detailToDisplay }) {
@@ -54,7 +56,7 @@ export default function Detail({ detailToDisplay }) {
         "target": detailToDisplay.target
       })
     })
-    alert("Added to favourites")
+    toast.success("Added to favourites successfully")
     addbtn.style.display = "none"
     removebtn.style.display = "block"
   }
@@ -73,7 +75,7 @@ export default function Detail({ detailToDisplay }) {
         'exercise': detailToDisplay.id
       })
     })
-    alert("Removed from favourites")
+    toast.success("Removed from favourites successfully")
     addbtn.style.display = "block"
     removebtn.style.display = "none"
   }
@@ -89,8 +91,19 @@ export default function Detail({ detailToDisplay }) {
           <button onClick={handleAddClick} id='addbtn'>Add to favourites</button>
           <button onClick={handleRemoveClick} id='removebtn'>Remove from favourites</button>
         </div>
-
       </div>
+      <ToastContainer
+                position="bottom-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
     </div>
   )
 }

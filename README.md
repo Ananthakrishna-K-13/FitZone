@@ -1,9 +1,9 @@
 # FitZone
-Unleash your fitness potential through our comprehensive website, offering exercise tutorials with GIFs, personalized YouTube suggestions, and essential health calculators for BMI, daily calories, and ideal weight guidance. It also has feautures for users to add certain exercises to favourites and check them later. Login/SignUp is necassary to use this app and is very simple.
+Unlock your fitness potential through our comprehensive website, offering exercise tutorials with GIFs, personalized YouTube suggestions, and essential health calculators for BMI, daily calories, and ideal weight guidance. The platform also features the option for users to add certain exercises to favorites and check them later. Logging in or signing up is necessary to utilize these features, and the process is designed to be simple and user-friendly.
 
-Frontend is built using React and CSS. Backend is a REST based API built using node, express, and MongoDB atlas.
+The frontend of the website is built using React and CSS, while the backend relies on a REST-based API developed using Node, Express, and MongoDB Atlas.
 
-Checkout [report](./report-zense.md) for more details
+Checkout the [report](./report-zense.md) for more details
 
 
 ## Environment Variables
@@ -16,8 +16,8 @@ In the Backend/.env file:<br />
 `MONGO_URI`<br />
 `JWT_SIGN`<br />
 
-You can contact me for my .env files or create your own. To create your own, resources are given below:
-<br/>
+
+## Setting Up Environment variables
 1. Create an account on [RapidApi](https://rapidapi.com/hub) and subscribe to these Apis for free to get the api key:
   * [ExerciseDB](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)
   * [Youtube Search and Download](https://rapidapi.com/h0p3rwe/api/youtube-search-and-download)
@@ -27,8 +27,10 @@ You can contact me for my .env files or create your own. To create your own, res
   
 3. `JWT_SIGN` can be any secret string.
 
+You can obtain the necessary values for these variables by following the provided resources or by reaching out to me for my own .env files.
 
-## Run Locally
+
+## Running the Project Locally
 Clone the project
 ```bash
   git clone https://github.com/Ananthakrishna-K-13/FitZone.git

@@ -50,7 +50,6 @@ export default function BMICalcultor() {
           <h1>Your BMI is :  <span>{bmi}</span></h1>
           <h1>Health status :  <span>{health}</span></h1>
           <h1>Healthy BMI Range : <span>{healthyRange}</span></h1>
-
         </div>
         <div className="spinner-bmi" id="spinbmi">
           <img src={spinner} alt="Loading..." />

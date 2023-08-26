@@ -71,6 +71,7 @@
     width: 50vw;
     height: 85vh;
     gap: 3vh;
+    font-family: var(--ff-h);
 }
 .result h1{
     font-size: 35px;
