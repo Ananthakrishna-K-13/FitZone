@@ -14,6 +14,7 @@ const getuser=(req,res,next)=>{
     try{
         let authdata = jwt.verify(webtoken,SIGN);
         req.user = authdata.id;
+        console.log(authdata)
         next();
     }
     catch(error){

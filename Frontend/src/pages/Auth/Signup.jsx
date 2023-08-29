@@ -1,7 +1,7 @@
 import React from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Link, useNavigate } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import loginImage from '../../assets/login.png'
 import './Login.css'
 import { useState } from 'react'
@@ -9,7 +9,6 @@ const baseUrl = "http://localhost:5000/api";
 
 
 const Signup = () => {
-    let nav = useNavigate()
     const [credentials, setCredentials] = useState({ username: '', password: '', confirmpassword: '' })
     const onchange = (e) => {
         setCredentials({ ...credentials, [e.target.id]: e.target.value })
@@ -41,8 +40,7 @@ const Signup = () => {
         })
         response = await response.json()
         if (response.success) {
-            localStorage.setItem('token', response.authtoken);
-            nav('/');
+            toast.success("Created account successfully. Login to continue")
         }
         else {
             return toast.warning("Username already exists. Provide a different username.")

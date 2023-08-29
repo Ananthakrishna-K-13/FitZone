@@ -39,7 +39,7 @@ router.post('/addfav',getuser,async (req,res)=>{
             bodyPart:req.body.bodyPart,
             target:req.body.target
         })
-        res.status(200).send("Succusfully added")
+        res.status(200).send({msg:"Succusfully added",user:req.user})
     }
     catch(error){
         console.error(error)
