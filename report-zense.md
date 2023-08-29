@@ -58,6 +58,7 @@ But this acted like both componentDidMount and componentDidUpdate and kept on fi
 
 ## Future scope
 
+* I was more focused on the functionality rather than the UI of the website, so I am planning to improve the web app's user interface.
 * As I ran into problems while hosting the website, I want to solve all those issues and host it and also make it optimized for search engines (Search engine optimiziation SEO) .
 * I plan to make dedicated workout routine for every muscle/bodyPart which enables users to choose their workout routine based on time available and target muscle which will track their workout over time and suggest harder exercises.
 * I also plan to gamify it by adding points per exercise completed, which will be measured based on time spent on a particular exercise, daily challenges, competition, leaderboards etc.

@@ -40,7 +40,7 @@ export default function IdealWeightCalculator() {
           </div>
         </div>
         <div className="result" id='bmi-result'>
-          <h1>Ideal weight for your height :  <span>{weight}</span> cms</h1>
+          <h1>Ideal weight for your height :  <span>{weight}</span> kgs</h1>
         </div>
         <div className="spinner-bmi" id="spinbmi">
           <img src={spinner} alt="Loading..." />
