@@ -30,7 +30,8 @@ I had very little to no knowledge about web-devolpment and how websites worked. 
 * react-top-loading-bar
 
 ## Experience:
-I enjoyed building this site as it was my first completely self-built website from scratch. I faced some frustrations due to problems like the free API usage limit, for which I had to create many extra Google accounts. Overall, it was a great learning experience. This project has increased my interest in WebDev and development in general. I plan to learn Bootstrap for easier styling and responsiveness, and I'm also exploring automation with Selenium. Additionally, I want to delve into DevOps. 
+I enjoyed building this site as it was my first completely self-built website from scratch. I faced some frustrations due to problems like the free API usage limit, for which I had to create many extra Google accounts. Overall, it was a great learning experience. This project has increased my interest in WebDev and development in general. I plan to learn Bootstrap for easier styling and responsiveness, and I'm also exploring automation with Selenium. Additionally, I want to delve into DevOps. Please consider checking my GitHub profile for other projects I have built and the skills I possess. I am also involved in a Zense project, "MFRS" (Mess Food Review System), collaborating with Nitheezkhant.
+
 
 ## Problems faced and how I solved them:
 As I was new to React/Node, I ran into numerous problems from wrong syntax to react router not scrolling the page to top, most of which were solved with the help of StackOverFlow and some other sites. Some of them are listed below.
