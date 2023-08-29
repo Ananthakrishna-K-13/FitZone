@@ -25,7 +25,7 @@ I had very little to no knowledge about web-devolpment and how websites worked. 
 * JSON web token
 * Rapid API
 * react-type-animation
-* react-toastify
+* react-toastify(used for notifications during login/signup like username already taken, wrong credentials etc.)
 * react-router-dom
 * react-top-loading-bar
 
